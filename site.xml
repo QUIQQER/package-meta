@@ -9,8 +9,7 @@
         <attribute>quiqqer.meta.site.description</attribute>
     </attributes>
 
-
-    <!-- settings -->
+    <!-- global site settings -->
     <settings>
 
         <category name="blog-list-settings">
@@ -24,11 +23,33 @@
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.title" />
                     </text>
                 </input>
-                <input conf="quiqqer.meta.site.index">
+
+                <select conf="quiqqer.meta.site.index">
                     <text>
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.index" />
                     </text>
-                </input>
+
+                    <option value="index">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.index" />
+                    </option>
+                    <option value="noindex">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.noindex" />
+                    </option>
+                    <option value="nofollow">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.nofollow" />
+                    </option>
+                    <option value="nofollow">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.nofollow" />
+                    </option>
+                    <option value="noindex, nofollow">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.noindex_nofollow" />
+                    </option>
+                    <option value="all">
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index.all" />
+                    </option>
+
+                </select>
+
                 <input conf="quiqqer.meta.site.keywords">
                     <text>
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords" />

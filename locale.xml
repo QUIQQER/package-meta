@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locales>
+
+    <groups name="quiqqer/meta" datatype="js">
+
+
+    </groups>
+
+
+    <groups name="quiqqer/meta" datatype="php,js">
+
+
+    </groups>
+
+
+    <groups name="quiqqer/meta" datatype="php">
+
+        <locale name="quiqqer.meta.settings.title">
+            <de><![CDATA[Seo Einstellungen]]></de>
+            <en><![CDATA[Sea settings]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.title">
+            <de><![CDATA[SEO Seitentitel]]></de>
+            <en><![CDATA[SEO site title]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.index">
+            <de><![CDATA[Anweisungen für Suchmaschinen]]></de>
+            <en><![CDATA[Instructions for search engines]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.keywords">
+            <de><![CDATA[SEO Stichworte]]></de>
+            <en><![CDATA[SEO keywords]]></en>
+        </locale>
+
+        <locale name="quiqqer.meta.site.index.index">
+            <de><![CDATA[Indizierung der Seite erlauben]]></de>
+            <en><![CDATA[Allow indexing of page]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.index.noindex">
+            <de><![CDATA[Indizierung der Seite nicht erlauben]]></de>
+            <en><![CDATA[Disallow indexing of page]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.index.nofollow">
+            <de><![CDATA[Untergeordnete Seiten / Dateien nicht besuchen]]></de>
+            <en><![CDATA[Don't visit child pages]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.index.noindex_nofollow">
+            <de><![CDATA[Indizierung der Seite nicht erlaubt und untergeordnete Seiten / Dateien nicht besuchen]]></de>
+            <en><![CDATA[Disallow indexing of page and don't visit child pages]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.index.all">
+            <de><![CDATA[Inhalte der Seite und aus untergeordneten Seiten besuchen und indizieren]]></de>
+            <en><![CDATA[Visit child pages and allow indexing of child pages]]></en>
+        </locale>
+
+    </groups>
+
+</locales>
