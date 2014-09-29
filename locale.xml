@@ -16,14 +16,14 @@
     <groups name="quiqqer/meta" datatype="php">
 
         <locale name="quiqqer.meta.settings.title">
-            <de><![CDATA[Seo Einstellungen]]></de>
-            <en><![CDATA[Sea settings]]></en>
+            <de><![CDATA[SEO Einstellungen]]></de>
+            <en><![CDATA[SEO settings]]></en>
         </locale>
         <locale name="quiqqer.meta.site.title">
             <de><![CDATA[SEO Seitentitel]]></de>
             <en><![CDATA[SEO site title]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.index">
+        <locale name="quiqqer.meta.site.robots">
             <de><![CDATA[Anweisungen für Suchmaschinen]]></de>
             <en><![CDATA[Instructions for search engines]]></en>
         </locale>
@@ -31,24 +31,30 @@
             <de><![CDATA[SEO Stichworte]]></de>
             <en><![CDATA[SEO keywords]]></en>
         </locale>
+        <locale name="quiqqer.meta.site.description">
+            <de><![CDATA[SEO Beschreibung]]></de>
+            <en><![CDATA[SEO description]]></en>
+        </locale>
 
-        <locale name="quiqqer.meta.site.index.index">
+
+        <!-- robots index -->
+        <locale name="quiqqer.meta.site.robots.index">
             <de><![CDATA[Indizierung der Seite erlauben]]></de>
             <en><![CDATA[Allow indexing of page]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.index.noindex">
+        <locale name="quiqqer.meta.site.robots.noindex">
             <de><![CDATA[Indizierung der Seite nicht erlauben]]></de>
             <en><![CDATA[Disallow indexing of page]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.index.nofollow">
+        <locale name="quiqqer.meta.site.robots.nofollow">
             <de><![CDATA[Untergeordnete Seiten / Dateien nicht besuchen]]></de>
             <en><![CDATA[Don't visit child pages]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.index.noindex_nofollow">
+        <locale name="quiqqer.meta.site.robots.noindex_nofollow">
             <de><![CDATA[Indizierung der Seite nicht erlaubt und untergeordnete Seiten / Dateien nicht besuchen]]></de>
             <en><![CDATA[Disallow indexing of page and don't visit child pages]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.index.all">
+        <locale name="quiqqer.meta.site.robots.all">
             <de><![CDATA[Inhalte der Seite und aus untergeordneten Seiten besuchen und indizieren]]></de>
             <en><![CDATA[Visit child pages and allow indexing of child pages]]></en>
         </locale>
