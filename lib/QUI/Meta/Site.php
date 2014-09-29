@@ -46,6 +46,12 @@ class Site
             $robots = $Project->getConfig( 'robots' );
         }
 
+        if ( !$title ) {
+            $title = $Site->getAttribute( 'title' );
+        }
+
+
+        $Site->setAttribute( 'meta.seotitle', $title );
         $Site->setAttribute( 'meta.robots', $robots );
         $Site->setAttribute( 'meta.description', $description );
         $Site->setAttribute( 'meta.keywords', $keywords );
