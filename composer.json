@@ -2,7 +2,7 @@
     "name" : "quiqqer/meta",
     "type" : "quiqqer-library",
     "description" : "Provided SEO / Meta / permalink functionality for QUIQQER.",
-    "version" : "dev-master",
+    "version" : "dev-dev",
     "license" : "GPL-2.0+",
 
     "authors" : [{
