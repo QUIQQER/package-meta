@@ -29,31 +29,79 @@ class Site
         $keywords    = $Site->getAttribute( 'quiqqer.meta.site.keywords' );
         $description = $Site->getAttribute( 'quiqqer.meta.site.description' );
 
-        if ( !$description )  {
-            $description = $Project->getConfig( 'description' );
+        $revisit   = '';
+        $publisher = '';
+        $copyright = '';
+
+
+        // meta description
+        if ( !$description )
+        {
+            $localeDescription = \QUI::getLocale()->get(
+                'quiqqer/meta',
+                'quiqqer.projects.description'
+            );
+
+            if ( !empty( $localeDescription ) ) {
+                $description = $localeDescription;
+            }
         }
 
         if ( !$description )  {
             $description = $Site->getAttribute( 'short' );
         }
 
-
-        if ( !$keywords )  {
-            $keywords = $Project->getConfig( 'keywords' );
+        if ( !$description ) {
+            $description = '';
         }
 
-        if ( !$robots ) {
-            $robots = $Project->getConfig( 'robots' );
+        // meta kewords
+        if ( !$keywords )
+        {
+            $localeKeywords = \QUI::getLocale()->get(
+                'quiqqer/meta',
+                'quiqqer.projects.keywords'
+            );
+
+            if ( !empty( $localeKeywords ) ) {
+                $keywords = $localeKeywords;
+            }
         }
 
+        // meta title
         if ( !$title ) {
             $title = $Site->getAttribute( 'title' );
         }
 
 
+        // settings
+        if ( !$robots ) {
+            $robots = $Project->getConfig( 'meta.project.robots' );
+        }
+
+        if ( empty( $publisher ) ) {
+            $publisher = $Project->getConfig( 'meta.project.publisher' );
+        }
+
+        if ( empty( $copyright ) ) {
+            $copyright = $Project->getConfig( 'meta.project.copyright' );
+        }
+
+        if ( empty( $revisit ) ) {
+            $revisit = $Project->getConfig( 'meta.project.revisit' );
+        }
+
+
+
+        $Site->setAttribute( 'meta.revisit', $revisit );
+
         $Site->setAttribute( 'meta.seotitle', $title );
         $Site->setAttribute( 'meta.robots', $robots );
         $Site->setAttribute( 'meta.description', $description );
         $Site->setAttribute( 'meta.keywords', $keywords );
+
+        $Site->setAttribute( 'meta.copyright', $copyright );
+        $Site->setAttribute( 'meta.publisher', $publisher );
+
     }
 }

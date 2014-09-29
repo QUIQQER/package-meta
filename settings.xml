@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<quiqqer>
+
+    <!-- project settings -->
+    <project>
+        <settings name="meta">
+
+            <!-- config params -->
+            <config>
+                <section name="project">
+                    <conf name="robots">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>index</defaultvalue>
+                    </conf>
+                    <conf name="publisher">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue></defaultvalue>
+                    </conf>
+                    <conf name="copyright">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue></defaultvalue>
+                    </conf>
+                    <conf name="revisit">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>2 days</defaultvalue>
+                    </conf>
+                </section>
+            </config>
+
+            <!-- config window -->
+            <window>
+                <categories>
+                    <category name="meta">
+                        <text>
+                            <locale group="quiqqer/meta" var="meta.project.settings.title" />
+                        </text>
+                        <icon>icon-file-text</icon>
+
+                        <settings title="meta" name="meta">
+                            <title>
+                                <locale group="quiqqer/meta" var="meta.project.settings.title" />
+                            </title>
+
+                            <select conf="meta.project.robots">
+                                <text>
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots" />
+                                </text>
+
+                                <option value="index">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index" />
+                                </option>
+                                <option value="noindex">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex" />
+                                </option>
+                                <option value="nofollow">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
+                                </option>
+                                <option value="nofollow">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
+                                </option>
+                                <option value="noindex, nofollow">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow" />
+                                </option>
+                                <option value="all">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all" />
+                                </option>
+                            </select>
+
+                            <input conf="meta.project.publisher">
+                                <text>
+                                    <locale group="quiqqer/meta" var="meta.project.settings.publisher" />
+                                </text>
+                            </input>
+
+                            <input conf="meta.project.copyright">
+                                <text>
+                                    <locale group="quiqqer/meta" var="meta.project.settings.copyright" />
+                                </text>
+                            </input>
+
+                            <input conf="meta.project.revisit">
+                                <text>
+                                    <locale group="quiqqer/meta" var="meta.project.settings.revisit" />
+                                </text>
+                            </input>
+                        </settings>
+
+                    </category>
+                </categories>
+            </window>
+
+        </settings>
+    </project>
+
+</quiqqer>

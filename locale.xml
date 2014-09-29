@@ -15,6 +15,39 @@
 
     <groups name="quiqqer/meta" datatype="php">
 
+        <locale name="meta.project.settings.title">
+            <de><![CDATA[Meta Einstellungen]]></de>
+            <en><![CDATA[Meta settings]]></en>
+        </locale>
+        <locale name="meta.project.settings.publisher">
+            <de><![CDATA[Meta - Herausgeber (Publisher)]]></de>
+            <en><![CDATA[Meta publisher]]></en>
+        </locale>
+        <locale name="meta.project.settings.copyright">
+            <de><![CDATA[Meta - Copyright]]></de>
+            <en><![CDATA[Meta copyright]]></en>
+        </locale>
+        <locale name="meta.project.settings.revisit">
+            <de><![CDATA[Meta - Suchmaschinen Überprüfungszeit (Revisit After)]]></de>
+            <en><![CDATA[Meta Revisit After]]></en>
+        </locale>
+
+
+
+
+
+        <!-- projects meta data settings-->
+        <locale name="quiqqer.projects.keywords">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqer.projects.description">
+            <de><![CDATA[]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+
+
+        <!-- site settings -->
         <locale name="quiqqer.meta.settings.title">
             <de><![CDATA[SEO Einstellungen]]></de>
             <en><![CDATA[SEO settings]]></en>
