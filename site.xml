@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <!-- extra attributes -->
+    <attributes>
+        <attribute>quiqqer.meta.site.title</attribute>
+        <attribute>quiqqer.meta.site.index</attribute>
+        <attribute>quiqqer.meta.site.keywords</attribute>
+        <attribute>quiqqer.meta.site.description</attribute>
+    </attributes>
+
+
+    <!-- settings -->
+    <settings>
+
+        <category name="blog-list-settings">
+            <settings>
+                <title>
+                    <locale group="quiqqer/meta" var="quiqqer.meta.settings.title" />
+                </title>
+
+                <input conf="quiqqer.meta.site.title">
+                    <text>
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.title" />
+                    </text>
+                </input>
+                <input conf="quiqqer.meta.site.index">
+                    <text>
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.index" />
+                    </text>
+                </input>
+                <input conf="quiqqer.meta.site.keywords">
+                    <text>
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords" />
+                    </text>
+                </input>
+            </settings>
+        </category>
+
+    </settings>
+
+</site>
