@@ -33,7 +33,25 @@
         </locale>
 
 
-
+        <!-- projects meta permalink settings-->
+        <locale name="quiqqer.permalink.settings.title">
+            <de><![CDATA[Permalink Einstellungen]]></de>
+            <en><![CDATA[Permalink settings]]></en>
+        </locale>
+        <locale name="quiqqer.package.meta.permalink">
+            <de><![CDATA[Permalink]]></de>
+            <en><![CDATA[Permalink]]></en>
+        </locale>
+        <locale name="quiqqer.package.meta.permalink.description" html="true">
+            <de><![CDATA[
+                <p>Ein Permalink (von permanent und hyperlink, auch Permanentlink) ist ein dauerhafter Identifikator in Form einer URL.</p>
+                <p>Bei der Einrichtung eines Permalinks wird angestrebt, die einmal über ihn referenzierten Inhalte dauerhaft und primär über diese URL verfügbar zu machen.</p>
+            ]]></de>
+            <en><![CDATA[
+                <p>A Permalink (of permanent hyperlink and also Permanent Link) is a permanent identifier in the form of a URL.</p>
+                <p>When setting up a permalink, the goal of a permalink is, the content permanently and primarily via this URL available.</p>
+            ]]></en>
+        </locale>
 
 
         <!-- projects meta data settings-->

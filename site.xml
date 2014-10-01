@@ -12,7 +12,22 @@
     <!-- global site settings -->
     <settings>
 
-        <category name="blog-list-settings">
+        <category name="meta-settings">
+            <settings require="">
+                <title>
+                    <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title" />
+                </title>
+
+                <input conf="quiqqer.package.meta.permalink" data-qui="URL_OPT_DIR/quiqqer/meta/bin/permalink/Input">
+                    <text>
+                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink" />
+                    </text>
+                    <description>
+                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description" />
+                    </description>
+                </input>
+            </settings>
+
             <settings>
                 <title>
                     <locale group="quiqqer/meta" var="quiqqer.meta.settings.title" />

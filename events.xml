@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <events>
     <event on="onSiteInit" fire="\QUI\Meta\Site::onInit" />
+    <event on="onSiteSave" fire="\QUI\Meta\Permalink::onSave" />
+    <event on="onSiteLoad" fire="\QUI\Meta\Permalink::onLoad" />
 </events>
