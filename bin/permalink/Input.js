@@ -3,6 +3,7 @@
  * Permalink input control
  * Permalink control is for an site panel
  *
+ * @module URL_OPT_DIR/quiqqer/meta/bin/permalink/Input
  * @author www.pcsg.de (Henning Leutz)
  */
 
