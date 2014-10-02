@@ -308,12 +308,12 @@ class Permalink
         {
             $Site = self::getSiteByPermalink( $Project, $url );
 
+            $Rewrite->setSite( $Site );
+
         } catch ( \QUI\Exception $Exception )
         {
 
         }
-
-        $Rewrite->setSite( $Site );
     }
 }
 
