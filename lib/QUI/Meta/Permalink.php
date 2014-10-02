@@ -22,6 +22,16 @@ class Permalink
      */
     static function setPermalinkForSite($Site, $permalink)
     {
+        if ( $Site->getId() === 1 )
+        {
+            throw new \QUI\Exception(
+                \QUI::getLocale()->get(
+                    'quiqqer/meta',
+                    'exception.permalink.firstChild.cant.have.permalink'
+                )
+            );
+        }
+
         $Project = $Site->getproject();
         $table   = \QUI::getDBProjectTableName( 'meta_permalink', $Project, false );
 
@@ -269,12 +279,41 @@ class Permalink
             // canonical setzen
             $Site->setAttribute( 'canonical', $link );
 
-            \QUI\System\Log::writeRecursive( $Site->getId() );
-            \QUI\System\Log::writeRecursive( $link );
-
         } catch ( \QUI\Exception $Exception )
         {
 
         }
     }
+
+    /**
+     * Event : on request
+     *
+     * @param \QUI\Rewrite $Rewrite
+     * @param String $url
+     */
+    static function onRequest($Rewrite, $url)
+    {
+        // media files are irrelevant
+        if ( strpos( $url, 'media/cache' ) !== false ) {
+            return;
+        }
+
+        if ( empty( $url ) ) {
+            return;
+        }
+
+        $Project = $Rewrite->getProject();
+
+        try
+        {
+            $Site = self::getSiteByPermalink( $Project, $url );
+
+        } catch ( \QUI\Exception $Exception )
+        {
+
+        }
+
+        $Rewrite->setSite( $Site );
+    }
 }
+

@@ -21,6 +21,8 @@ define([
 {
     "use strict";
 
+    var lg = 'quiqqer/meta';
+
     return new Class({
 
         Type    : 'URL_OPT_DIR/quiqqer/meta/bin/permalink/Input',
@@ -66,7 +68,7 @@ define([
 
             // delete button
             this.$DeleteButton = new QUIButton({
-                text     : 'Permalink löschen',
+                text     : Locale.get( lg, 'meta.permalink.button.delete.text' ),
                 disabled : true,
                 events   : {
                     onClick : this.deletePermalink
@@ -82,6 +84,29 @@ define([
             Container.replaces( this.$Elm );
 
             this.$Elm = Container;
+
+
+            // id 1 cant have a permalink
+            var PanelElm = this.$Elm.getParent( '.qui-panel' ),
+                Panel    = QUI.Controls.getById( PanelElm.get( 'data-quiid' ) ),
+                Site     = Panel.getSite();
+
+            if ( Site.getId() == 1 )
+            {
+                var self = this;
+
+                this.$Input.disabled = true;
+
+                QUI.getMessageHandler(function(MH)
+                {
+                    MH.addInformation(
+                        Locale.get( lg, 'exception.permalink.firstChild.cant.have.permalink' ),
+                        self.$Input
+                    );
+                });
+            }
+
+
         },
 
         /**
@@ -101,12 +126,14 @@ define([
                 Project  = Site.getProject();
 
             new QUIConfirm({
-                title     : 'Permalink löschen',
+                title     : Locale.get( lg, 'meta.permalink.window.delete.title' ),
                 maxHeight : 300,
                 maxWidth  : 500,
                 autoclose : false,
-                text      : Locale.get( 'quiqqer/meta', 'permalink.window.delete.text' ),
-                events    :
+                text      : Locale.get( lg, 'meta.permalink.window.delete.text', {
+                    id : Site.getId()
+                }),
+                events :
                 {
                     onOpen : function() {
                         Panel.Loader.show();
@@ -146,7 +173,5 @@ define([
                 }
             }).open();
         }
-
-
     });
 });
