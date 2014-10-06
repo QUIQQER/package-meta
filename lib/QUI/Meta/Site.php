@@ -92,6 +92,34 @@ class Site
         }
 
 
+        if ( !$revisit ) {
+            $revisit = '';
+        }
+
+        if ( !$title ) {
+            $title = '';
+        }
+
+        if ( !$robots ) {
+            $robots = '';
+        }
+
+        if ( !$description ) {
+            $description = '';
+        }
+
+        if ( !$keywords ) {
+            $keywords = '';
+        }
+
+        if ( !$copyright ) {
+            $copyright = '';
+        }
+
+        if ( !$publisher ) {
+            $publisher = '';
+        }
+
 
         $Site->setAttribute( 'meta.revisit', $revisit );
 
