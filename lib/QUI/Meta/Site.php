@@ -130,6 +130,5 @@ class Site
 
         $Site->setAttribute( 'meta.copyright', $copyright );
         $Site->setAttribute( 'meta.publisher', $publisher );
-
     }
 }
