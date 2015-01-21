@@ -35,7 +35,11 @@ class Site
 
 
         // meta description
-        if ( !$description )
+        if ( !$description )  {
+            $description = $Site->getAttribute( 'short' );
+        }
+
+        if ( !$description || empty( $description ) )
         {
             $localeDescription = \QUI::getLocale()->get(
                 'quiqqer/meta',
@@ -45,10 +49,6 @@ class Site
             if ( !empty( $localeDescription ) ) {
                 $description = $localeDescription;
             }
-        }
-
-        if ( !$description )  {
-            $description = $Site->getAttribute( 'short' );
         }
 
         if ( !$description ) {
