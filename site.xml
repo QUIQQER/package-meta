@@ -18,7 +18,7 @@
                     <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title" />
                 </title>
 
-                <input conf="quiqqer.package.meta.permalink" data-qui="URL_OPT_DIR/quiqqer/meta/bin/permalink/Input">
+                <input conf="quiqqer.package.meta.permalink" data-qui="package/quiqqer/meta/bin/permalink/Input">
                     <text>
                         <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink" />
                     </text>

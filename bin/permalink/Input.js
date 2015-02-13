@@ -3,22 +3,23 @@
  * Permalink input control
  * Permalink control is for an site panel
  *
- * @module URL_OPT_DIR/quiqqer/meta/bin/permalink/Input
+ * @module package/quiqqer/meta/bin/permalink/Input
  * @author www.pcsg.de (Henning Leutz)
  */
 
-define([
+define('package/quiqqer/meta/bin/permalink/Input', [
 
     'qui/QUI',
     'qui/controls/Control',
     'qui/controls/buttons/Button',
     'qui/controls/windows/Confirm',
+    'qui/controls/messages/Information',
     'Ajax',
     'Locale',
 
-    'css!URL_OPT_DIR/quiqqer/meta/bin/permalink/Input.css'
+    'css!package/quiqqer/meta/bin/permalink/Input.css'
 
-], function(QUI, QUIControl, QUIButton, QUIConfirm, Ajax, Locale)
+], function(QUI, QUIControl, QUIButton, QUIConfirm, QUIInformation, Ajax, Locale)
 {
     "use strict";
 
@@ -26,7 +27,7 @@ define([
 
     return new Class({
 
-        Type    : 'URL_OPT_DIR/quiqqer/meta/bin/permalink/Input',
+        Type    : 'package/quiqqer/meta/bin/permalink/Input',
         Extends : QUIControl,
 
         Binds : [
@@ -94,20 +95,15 @@ define([
 
             if ( Site.getId() == 1 )
             {
-                var self = this;
-
                 this.$Input.disabled = true;
 
-                QUI.getMessageHandler(function(MH)
-                {
-                    MH.addInformation(
-                        Locale.get( lg, 'exception.permalink.firstChild.cant.have.permalink' ),
-                        self.$Input
-                    );
-                });
+                new QUIInformation({
+                    message : Locale.get( lg, 'exception.permalink.firstChild.cant.have.permalink' ),
+                    styles  : {
+                        marginBottom : 10
+                    }
+                }).inject( this.$Elm );
             }
-
-
         },
 
         /**
