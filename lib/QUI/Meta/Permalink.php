@@ -6,6 +6,8 @@
 
 namespace QUI\Meta;
 
+use QUI;
+
 /**
  * Permalink class
  *
@@ -18,14 +20,17 @@ class Permalink
      * Set the permalink for a Site
      *
      * @param \QUI\Projects\Site $Site
-     * @param String $permalink
+     * @param String             $permalink
+     *
+     * @return Bool
+     *
+     * @throws \QUI\Exception
      */
     static function setPermalinkForSite($Site, $permalink)
     {
-        if ( $Site->getId() === 1 )
-        {
-            throw new \QUI\Exception(
-                \QUI::getLocale()->get(
+        if ($Site->getId() === 1) {
+            throw new QUI\Exception(
+                QUI::getLocale()->get(
                     'quiqqer/meta',
                     'exception.permalink.firstChild.cant.have.permalink'
                 )
@@ -33,27 +38,24 @@ class Permalink
         }
 
         $Project = $Site->getproject();
-        $table   = \QUI::getDBProjectTableName( 'meta_permalink', $Project, false );
+        $table = \QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $hasPermalink    = false;
+        $hasPermalink = false;
         $permalinkExists = false;
 
         // has the site a permalink?
-        try
-        {
-            self::getPermalinkFor( $Site );
+        try {
+            self::getPermalinkFor($Site);
 
             $hasPermalink = true;
 
-        } catch ( \QUI\Exception $Exception )
-        {
+        } catch (QUI\Exception $Exception) {
 
         }
 
-        if ( $hasPermalink )
-        {
-            throw new \QUI\Exception(
-                \QUI::getLocale()->get(
+        if ($hasPermalink) {
+            throw new QUI\Exception(
+                QUI::getLocale()->get(
                     'quiqqer/meta',
                     'exception.permalink.couldNotSet.site.has.permalink'
                 ),
@@ -62,21 +64,18 @@ class Permalink
         }
 
         // exist the permalink?
-        try
-        {
-            self::getSiteByPermalink( $Project, $permalink );
+        try {
+            self::getSiteByPermalink($Project, $permalink);
 
             $permalinkExists = true;
 
-        } catch ( \QUI\Exception $Exception  )
-        {
+        } catch (QUI\Exception $Exception) {
             // not exist, all is ok
         }
 
-        if ( $permalinkExists )
-        {
-            throw new \QUI\Exception(
-                \QUI::getLocale()->get(
+        if ($permalinkExists) {
+            throw new QUI\Exception(
+                QUI::getLocale()->get(
                     'quiqqer/meta',
                     'exception.permalink.couldNotSet.already.exists'
                 ),
@@ -90,7 +89,7 @@ class Permalink
         // clear
         $permalink = str_replace(' ', '-', $permalink);
 
-        \QUI::getDataBase()->insert($table, array(
+        QUI::getDataBase()->insert($table, array(
             'id'   => $Site->getId(),
             'lang' => $Project->getLang(),
             'link' => $permalink
@@ -103,15 +102,16 @@ class Permalink
      * Return the permalink from a Site
      *
      * @param \QUI\Projects\Site $Site
+     *
      * @throws \QUI\Exception
      * @return String
      */
     static function getPermalinkFor($Site)
     {
         $Project = $Site->getProject();
-        $table   = \QUI::getDBProjectTableName( 'meta_permalink', $Project, false );
+        $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $result = \QUI::getDataBase()->fetch(array(
+        $result = QUI::getDataBase()->fetch(array(
             'from'  => $table,
             'where' => array(
                 'id'   => $Site->getId(),
@@ -120,10 +120,9 @@ class Permalink
             'limit' => 1
         ));
 
-        if ( !isset( $result[0] ) )
-        {
-            throw new \QUI\Exception(
-                \QUI::getLocale()->get(
+        if (!isset($result[0])) {
+            throw new QUI\Exception(
+                QUI::getLocale()->get(
                     'quiqqer/meta',
                     'exception.permalink.not.found'
                 ),
@@ -138,49 +137,48 @@ class Permalink
      * Return the Site for a specific permalink
      *
      * @param \QUI\Projects\Project $Project
-     * @param String $url
+     * @param String                $url
      *
      * @throws \QUI\Exception
      * @return \QUI\Projects\Site
      */
-    static function getSiteByPermalink(\QUI\Projects\Project $Project, $url)
+    static function getSiteByPermalink(QUI\Projects\Project $Project, $url)
     {
-        $table = \QUI::getDBProjectTableName( 'meta_permalink', $Project, false );
+        $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $result = \QUI::getDataBase()->fetch(array(
+        $result = QUI::getDataBase()->fetch(array(
             'from'  => $table,
             'where' => array(
-                 'link' => $url
+                'link' => $url
             ),
             'limit' => 1
         ));
 
 
-        if ( !isset( $result[0] ) )
-        {
-            $params = explode( \QUI\Rewrite::URL_PARAM_SEPERATOR, $url );
-            $url    = $params[0] .'.html';
+        if (!isset($result[0])) {
+            $params = explode(QUI\Rewrite::URL_PARAM_SEPERATOR, $url);
+            $url = $params[0].'.html';
 
-            $result = \QUI::getDataBase()->fetch(array(
+            $result = QUI::getDataBase()->fetch(array(
                 'from'  => $table,
                 'where' => array(
-                     'link' => $url
+                    'link' => $url
                 ),
                 'limit' => 1
             ));
 
-            if ( isset( $result[0] ) )
-            {
-                $_Project = \QUI::getProjectManager()->getProject(
+            if (isset($result[0])) {
+                $_Project = QUI::getProjectManager()->getProject(
                     $Project->getName(),
                     $result[0]['lang']
                 );
 
-                return $_Project->get( $result[0]['id'] );
+                return $_Project->get($result[0]['id']);
             }
 
-            throw new \QUI\Exception(
-                \QUI::getLocale()->get('quiqqer/system', 'exception.site.not.found'),
+            throw new QUI\Exception(
+                QUI::getLocale()
+                    ->get('quiqqer/system', 'exception.site.not.found'),
                 404
             );
         }
@@ -190,21 +188,22 @@ class Permalink
             $result[0]['lang']
         );
 
-        return $_Project->get( $result[0]['id'] );
+        return $_Project->get($result[0]['id']);
     }
 
     /**
      * Delete the permalink for a site
      *
      * @param \QUI\Projects\Site $Site
+     *
      * @throws \QUI\Exception
      */
     static function deletePermalinkForSite($Site)
     {
         $Project = $Site->getProject();
-        $table   = \QUI::getDBProjectTableName( 'meta_permalink', $Project, false );
+        $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        \QUI::getDataBase()->delete($table, array(
+        QUI::getDataBase()->delete($table, array(
             'id'   => $Site->getId(),
             'lang' => $Project->getLang()
         ));
@@ -221,35 +220,31 @@ class Permalink
      */
     static function onSave($Site)
     {
-        if ( !$Site->getAttribute('quiqqer.package.meta.permalink') ) {
+        if (!$Site->getAttribute('quiqqer.package.meta.permalink')) {
             return;
         }
 
         $permalink = $Site->getAttribute('quiqqer.package.meta.permalink');
 
-        try
-        {
-            $oldLink = self::getPermalinkFor( $Site );
+        try {
+            $oldLink = self::getPermalinkFor($Site);
 
-            if ( $oldLink == $permalink ) {
+            if ($oldLink == $permalink) {
                 return;
             }
 
-        } catch ( \QUI\Exception $Exception )
-        {
+        } catch (QUI\Exception $Exception) {
 
         }
 
-        try
-        {
-            self::setPermalinkForSite( $Site, $permalink );
+        try {
+            self::setPermalinkForSite($Site, $permalink);
 
-        } catch ( \QUI\Exception $Exception )
-        {
-            \QUI\System\Log::writeException( $Exception );
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeException($Exception);
 
-            \QUI::getMessagesHandler()->addError(
-                \QUI::getLocale()->get(
+            QUI::getMessagesHandler()->addError(
+                QUI::getLocale()->get(
                     'quiqqer/meta',
                     'message.permalink.could.not.set'
                 )
@@ -265,22 +260,20 @@ class Permalink
     static function onLoad($Site)
     {
         // if permalink exist, set the meta canonical
-        try
-        {
-            $link = self::getPermalinkFor( $Site );
+        try {
+            $link = self::getPermalinkFor($Site);
 
-            if ( empty( $link ) ) {
+            if (empty($link)) {
                 return;
             }
 
             // for the admin
-            $Site->setAttribute( 'quiqqer.package.meta.permalink', $link );
+            $Site->setAttribute('quiqqer.package.meta.permalink', $link);
 
             // canonical setzen
-            $Site->setAttribute( 'canonical', $link );
+            $Site->setAttribute('canonical', $link);
 
-        } catch ( \QUI\Exception $Exception )
-        {
+        } catch (QUI\Exception $Exception) {
 
         }
     }
@@ -289,29 +282,27 @@ class Permalink
      * Event : on request
      *
      * @param \QUI\Rewrite $Rewrite
-     * @param String $url
+     * @param String       $url
      */
     static function onRequest($Rewrite, $url)
     {
         // media files are irrelevant
-        if ( strpos( $url, 'media/cache' ) !== false ) {
+        if (strpos($url, 'media/cache') !== false) {
             return;
         }
 
-        if ( empty( $url ) ) {
+        if (empty($url)) {
             return;
         }
 
         $Project = $Rewrite->getProject();
 
-        try
-        {
-            $Site = self::getSiteByPermalink( $Project, $url );
+        try {
+            $Site = self::getSiteByPermalink($Project, $url);
 
-            $Rewrite->setSite( $Site );
+            $Rewrite->setSite($Site);
 
-        } catch ( \QUI\Exception $Exception )
-        {
+        } catch (QUI\Exception $Exception) {
 
         }
     }
