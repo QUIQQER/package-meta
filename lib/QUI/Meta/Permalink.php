@@ -13,14 +13,13 @@ use QUI;
  *
  * @author www.pcsg.de (Henning Leutz)
  */
-
 class Permalink
 {
     /**
      * Set the permalink for a Site
      *
      * @param \QUI\Projects\Site $Site
-     * @param String             $permalink
+     * @param String $permalink
      *
      * @return Bool
      *
@@ -38,9 +37,9 @@ class Permalink
         }
 
         $Project = $Site->getproject();
-        $table = \QUI::getDBProjectTableName('meta_permalink', $Project, false);
+        $table   = \QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $hasPermalink = false;
+        $hasPermalink    = false;
         $permalinkExists = false;
 
         // has the site a permalink?
@@ -109,7 +108,7 @@ class Permalink
     static function getPermalinkFor($Site)
     {
         $Project = $Site->getProject();
-        $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
+        $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $result = QUI::getDataBase()->fetch(array(
             'from'  => $table,
@@ -137,7 +136,7 @@ class Permalink
      * Return the Site for a specific permalink
      *
      * @param \QUI\Projects\Project $Project
-     * @param String                $url
+     * @param String $url
      *
      * @throws \QUI\Exception
      * @return \QUI\Projects\Site
@@ -157,7 +156,7 @@ class Permalink
 
         if (!isset($result[0])) {
             $params = explode(QUI\Rewrite::URL_PARAM_SEPERATOR, $url);
-            $url = $params[0].'.html';
+            $url    = $params[0] . QUI\Rewrite::getDefaultSuffix();
 
             $result = QUI::getDataBase()->fetch(array(
                 'from'  => $table,
@@ -201,7 +200,7 @@ class Permalink
     static function deletePermalinkForSite($Site)
     {
         $Project = $Site->getProject();
-        $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
+        $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         QUI::getDataBase()->delete($table, array(
             'id'   => $Site->getId(),
@@ -282,7 +281,7 @@ class Permalink
      * Event : on request
      *
      * @param \QUI\Rewrite $Rewrite
-     * @param String       $url
+     * @param String $url
      */
     static function onRequest($Rewrite, $url)
     {
