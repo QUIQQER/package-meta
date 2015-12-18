@@ -12,7 +12,6 @@ namespace QUI\Meta;
  *
  * @author www.pcsg.de (Henning Leutz)
  */
-
 class Site
 {
     /**
@@ -20,16 +19,16 @@ class Site
      *
      * @param \QUI\Projects\Site $Site
      */
-    static function onInit($Site)
+    public static function onInit($Site)
     {
         $Project = $Site->getProject();
 
-        $title = $Site->getAttribute('quiqqer.meta.site.title');
-        $robots = $Site->getAttribute('quiqqer.meta.site.robots');
-        $keywords = $Site->getAttribute('quiqqer.meta.site.keywords');
+        $title       = $Site->getAttribute('quiqqer.meta.site.title');
+        $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
+        $keywords    = $Site->getAttribute('quiqqer.meta.site.keywords');
         $description = $Site->getAttribute('quiqqer.meta.site.description');
 
-        $revisit = '';
+        $revisit   = '';
         $publisher = '';
         $copyright = '';
 
