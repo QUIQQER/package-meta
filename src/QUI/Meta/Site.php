@@ -6,6 +6,8 @@
 
 namespace QUI\Meta;
 
+use QUI;
+
 /**
  * Meta Site class
  * Set the meta data for \QUI\Projects\Site Objects
@@ -39,7 +41,7 @@ class Site
         }
 
         if (!$description || empty($description)) {
-            $localeDescription = \QUI::getLocale()->get(
+            $localeDescription = QUI::getLocale()->get(
                 'quiqqer/meta',
                 'quiqqer.projects.description'
             );
@@ -55,7 +57,7 @@ class Site
 
         // meta kewords
         if (!$keywords) {
-            $localeKeywords = \QUI::getLocale()->get(
+            $localeKeywords = QUI::getLocale()->get(
                 'quiqqer/meta',
                 'quiqqer.projects.keywords'
             );
