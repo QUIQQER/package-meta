@@ -98,7 +98,7 @@ class Site
         }
 
         if (!$robots) {
-            $robots = '';
+            $robots = 'all';
         }
 
         if (!$description) {
