@@ -35,7 +35,7 @@
                         <text>
                             <locale group="quiqqer/meta" var="meta.project.settings.title" />
                         </text>
-                        <icon>icon-file-text</icon>
+                        <icon>fa fa-file-text</icon>
 
                         <settings title="meta" name="meta">
                             <title>
