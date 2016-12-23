@@ -37,7 +37,7 @@ class Permalink
         }
 
         $Project = $Site->getproject();
-        $table   = \QUI::getDBProjectTableName('meta_permalink', $Project, false);
+        $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $hasPermalink    = false;
         $permalinkExists = false;
@@ -45,9 +45,7 @@ class Permalink
         // has the site a permalink?
         try {
             self::getPermalinkFor($Site);
-
             $hasPermalink = true;
-
         } catch (QUI\Exception $Exception) {
         }
 
@@ -64,9 +62,7 @@ class Permalink
         // exist the permalink?
         try {
             self::getSiteByPermalink($Project, $permalink);
-
             $permalinkExists = true;
-
         } catch (QUI\Exception $Exception) {
             // not exist, all is ok
         }
@@ -88,7 +84,7 @@ class Permalink
         $permalink = str_replace(' ', '-', $permalink);
 
         QUI::getDataBase()->insert($table, array(
-            'id' => $Site->getId(),
+            'id'   => $Site->getId(),
             'lang' => $Project->getLang(),
             'link' => $permalink
         ));
@@ -110,9 +106,9 @@ class Permalink
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $result = QUI::getDataBase()->fetch(array(
-            'from' => $table,
+            'from'  => $table,
             'where' => array(
-                'id' => $Site->getId(),
+                'id'   => $Site->getId(),
                 'lang' => $Project->getLang()
             ),
             'limit' => 1
@@ -145,7 +141,7 @@ class Permalink
         $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $result = QUI::getDataBase()->fetch(array(
-            'from' => $table,
+            'from'  => $table,
             'where' => array(
                 'link' => $url
             ),
@@ -158,7 +154,7 @@ class Permalink
             $url    = $params[0] . QUI\Rewrite::getDefaultSuffix();
 
             $result = QUI::getDataBase()->fetch(array(
-                'from' => $table,
+                'from'  => $table,
                 'where' => array(
                     'link' => $url
                 ),
@@ -202,7 +198,7 @@ class Permalink
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         QUI::getDataBase()->delete($table, array(
-            'id' => $Site->getId(),
+            'id'   => $Site->getId(),
             'lang' => $Project->getLang()
         ));
     }
@@ -230,13 +226,11 @@ class Permalink
             if ($oldLink == $permalink) {
                 return;
             }
-
         } catch (QUI\Exception $Exception) {
         }
 
         try {
             self::setPermalinkForSite($Site, $permalink);
-
         } catch (QUI\Exception $Exception) {
             QUI\System\Log::writeException($Exception);
 
@@ -269,7 +263,6 @@ class Permalink
 
             // canonical setzen
             $Site->setAttribute('canonical', $link);
-
         } catch (QUI\Exception $Exception) {
         }
     }
@@ -295,9 +288,7 @@ class Permalink
 
         try {
             $Site = self::getSiteByPermalink($Project, $url);
-
             $Rewrite->setSite($Site);
-
         } catch (QUI\Exception $Exception) {
         }
     }

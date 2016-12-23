@@ -17,7 +17,6 @@ function package_quiqqer_meta_ajax_permalink_delete($project, $lang, $id)
 
     try {
         return QUI\Meta\Permalink::getPermalinkFor($Site);
-
     } catch (QUI\Exception $Exception) {
         return '';
     }
