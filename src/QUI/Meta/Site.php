@@ -6,13 +6,14 @@
 
 namespace QUI\Meta;
 
+use QUI;
+
 /**
  * Meta Site class
  * Set the meta data for \QUI\Projects\Site Objects
  *
  * @author www.pcsg.de (Henning Leutz)
  */
-
 class Site
 {
     /**
@@ -20,16 +21,16 @@ class Site
      *
      * @param \QUI\Projects\Site $Site
      */
-    static function onInit($Site)
+    public static function onInit($Site)
     {
         $Project = $Site->getProject();
 
-        $title = $Site->getAttribute('quiqqer.meta.site.title');
-        $robots = $Site->getAttribute('quiqqer.meta.site.robots');
-        $keywords = $Site->getAttribute('quiqqer.meta.site.keywords');
+        $title       = $Site->getAttribute('quiqqer.meta.site.title');
+        $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
+        $keywords    = $Site->getAttribute('quiqqer.meta.site.keywords');
         $description = $Site->getAttribute('quiqqer.meta.site.description');
 
-        $revisit = '';
+        $revisit   = '';
         $publisher = '';
         $copyright = '';
 
@@ -40,7 +41,7 @@ class Site
         }
 
         if (!$description || empty($description)) {
-            $localeDescription = \QUI::getLocale()->get(
+            $localeDescription = QUI::getLocale()->get(
                 'quiqqer/meta',
                 'quiqqer.projects.description'
             );
@@ -56,7 +57,7 @@ class Site
 
         // meta kewords
         if (!$keywords) {
-            $localeKeywords = \QUI::getLocale()->get(
+            $localeKeywords = QUI::getLocale()->get(
                 'quiqqer/meta',
                 'quiqqer.projects.keywords'
             );
@@ -99,7 +100,7 @@ class Site
         }
 
         if (!$robots) {
-            $robots = '';
+            $robots = 'all';
         }
 
         if (!$description) {

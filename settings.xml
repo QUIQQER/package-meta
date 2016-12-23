@@ -35,7 +35,7 @@
                         <text>
                             <locale group="quiqqer/meta" var="meta.project.settings.title" />
                         </text>
-                        <icon>icon-file-text</icon>
+                        <icon>fa fa-file-text</icon>
 
                         <settings title="meta" name="meta">
                             <title>
@@ -47,8 +47,8 @@
                                     <locale group="quiqqer/meta" var="quiqqer.meta.site.robots" />
                                 </text>
 
-                                <option value="index">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index" />
+                                <option value="all">
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all" />
                                 </option>
                                 <option value="noindex">
                                     <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex" />
@@ -56,15 +56,10 @@
                                 <option value="nofollow">
                                     <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
                                 </option>
-                                <option value="nofollow">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
-                                </option>
                                 <option value="noindex, nofollow">
                                     <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow" />
                                 </option>
-                                <option value="all">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all" />
-                                </option>
+
                             </select>
 
                             <input conf="meta.project.publisher">

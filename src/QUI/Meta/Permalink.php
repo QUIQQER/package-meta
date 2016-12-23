@@ -19,13 +19,13 @@ class Permalink
      * Set the permalink for a Site
      *
      * @param \QUI\Projects\Site $Site
-     * @param String $permalink
+     * @param string $permalink
      *
-     * @return Bool
+     * @return boolean
      *
      * @throws \QUI\Exception
      */
-    static function setPermalinkForSite($Site, $permalink)
+    public static function setPermalinkForSite($Site, $permalink)
     {
         if ($Site->getId() === 1) {
             throw new QUI\Exception(
@@ -49,7 +49,6 @@ class Permalink
             $hasPermalink = true;
 
         } catch (QUI\Exception $Exception) {
-
         }
 
         if ($hasPermalink) {
@@ -89,7 +88,7 @@ class Permalink
         $permalink = str_replace(' ', '-', $permalink);
 
         QUI::getDataBase()->insert($table, array(
-            'id'   => $Site->getId(),
+            'id' => $Site->getId(),
             'lang' => $Project->getLang(),
             'link' => $permalink
         ));
@@ -103,17 +102,17 @@ class Permalink
      * @param \QUI\Projects\Site $Site
      *
      * @throws \QUI\Exception
-     * @return String
+     * @return string
      */
-    static function getPermalinkFor($Site)
+    public static function getPermalinkFor($Site)
     {
         $Project = $Site->getProject();
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $result = QUI::getDataBase()->fetch(array(
-            'from'  => $table,
+            'from' => $table,
             'where' => array(
-                'id'   => $Site->getId(),
+                'id' => $Site->getId(),
                 'lang' => $Project->getLang()
             ),
             'limit' => 1
@@ -136,17 +135,17 @@ class Permalink
      * Return the Site for a specific permalink
      *
      * @param \QUI\Projects\Project $Project
-     * @param String $url
+     * @param string $url
      *
      * @throws \QUI\Exception
      * @return \QUI\Projects\Site
      */
-    static function getSiteByPermalink(QUI\Projects\Project $Project, $url)
+    public static function getSiteByPermalink(QUI\Projects\Project $Project, $url)
     {
         $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         $result = QUI::getDataBase()->fetch(array(
-            'from'  => $table,
+            'from' => $table,
             'where' => array(
                 'link' => $url
             ),
@@ -159,7 +158,7 @@ class Permalink
             $url    = $params[0] . QUI\Rewrite::getDefaultSuffix();
 
             $result = QUI::getDataBase()->fetch(array(
-                'from'  => $table,
+                'from' => $table,
                 'where' => array(
                     'link' => $url
                 ),
@@ -197,13 +196,13 @@ class Permalink
      *
      * @throws \QUI\Exception
      */
-    static function deletePermalinkForSite($Site)
+    public static function deletePermalinkForSite($Site)
     {
         $Project = $Site->getProject();
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
         QUI::getDataBase()->delete($table, array(
-            'id'   => $Site->getId(),
+            'id' => $Site->getId(),
             'lang' => $Project->getLang()
         ));
     }
@@ -217,7 +216,7 @@ class Permalink
      *
      * @param \QUI\Projects\Site\Edit $Site
      */
-    static function onSave($Site)
+    public static function onSave($Site)
     {
         if (!$Site->getAttribute('quiqqer.package.meta.permalink')) {
             return;
@@ -233,7 +232,6 @@ class Permalink
             }
 
         } catch (QUI\Exception $Exception) {
-
         }
 
         try {
@@ -256,7 +254,7 @@ class Permalink
      *
      * @param \QUI\Projects\Site\Edit $Site
      */
-    static function onLoad($Site)
+    public static function onLoad($Site)
     {
         // if permalink exist, set the meta canonical
         try {
@@ -273,7 +271,6 @@ class Permalink
             $Site->setAttribute('canonical', $link);
 
         } catch (QUI\Exception $Exception) {
-
         }
     }
 
@@ -281,9 +278,9 @@ class Permalink
      * Event : on request
      *
      * @param \QUI\Rewrite $Rewrite
-     * @param String $url
+     * @param string $url
      */
-    static function onRequest($Rewrite, $url)
+    public static function onRequest($Rewrite, $url)
     {
         // media files are irrelevant
         if (strpos($url, 'media/cache') !== false) {
@@ -302,8 +299,6 @@ class Permalink
             $Rewrite->setSite($Site);
 
         } catch (QUI\Exception $Exception) {
-
         }
     }
 }
-
