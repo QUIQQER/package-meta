@@ -129,5 +129,15 @@ class Site
 
         $Site->setAttribute('meta.copyright', $copyright);
         $Site->setAttribute('meta.publisher', $publisher);
+
+        // social image
+        $Site->setAttribute('meta.socialimage', $Site->getAttribute('image_site'));
+
+        if ($Site->getAttribute('quiqqer.meta.site.social.image')) {
+            $Site->setAttribute(
+                'meta.socialimage',
+                $Site->getAttribute('quiqqer.meta.site.social.image')
+            );
+        }
     }
 }

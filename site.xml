@@ -7,6 +7,7 @@
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.keywords</attribute>
         <attribute>quiqqer.meta.site.description</attribute>
+        <attribute>quiqqer.meta.site.social.image</attribute>
     </attributes>
 
     <!-- global site settings -->
@@ -15,64 +16,70 @@
         <category name="meta-settings">
             <settings require="">
                 <title>
-                    <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title" />
+                    <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title"/>
                 </title>
 
                 <input conf="quiqqer.package.meta.permalink" data-qui="package/quiqqer/meta/bin/permalink/Input">
                     <text>
-                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink" />
+                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink"/>
                     </text>
                     <description>
-                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description" />
+                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description"/>
                     </description>
                 </input>
             </settings>
 
             <settings>
                 <title>
-                    <locale group="quiqqer/meta" var="quiqqer.meta.settings.title" />
+                    <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
                 </title>
+
+                <input conf="quiqqer.meta.site.social.image" class="media-image">
+                    <text>
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.social.image.title"/>
+                    </text>
+                </input>
 
                 <select conf="quiqqer.meta.site.robots">
                     <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots"/>
                     </text>
 
                     <option value="index">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index"/>
                     </option>
                     <option value="noindex">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex"/>
                     </option>
                     <option value="nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
                     </option>
                     <option value="nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
                     </option>
                     <option value="noindex, nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow"/>
                     </option>
                     <option value="all">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all"/>
                     </option>
                 </select>
 
                 <input conf="quiqqer.meta.site.title">
                     <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.title" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.title"/>
                     </text>
                 </input>
 
                 <input conf="quiqqer.meta.site.keywords">
                     <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords"/>
                     </text>
                 </input>
 
                 <textarea conf="quiqqer.meta.site.description">
                     <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.description" />
+                        <locale group="quiqqer/meta" var="quiqqer.meta.site.description"/>
                     </text>
                 </textarea>
 
