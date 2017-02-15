@@ -139,5 +139,15 @@ class Site
                 $Site->getAttribute('quiqqer.meta.site.social.image')
             );
         }
+
+        try {
+            $Image = QUI\Projects\Media\Utils::getImageByUrl(
+                $Site->getAttribute('meta.socialimage')
+            );
+
+            $Site->setAttribute('meta.socialimage', $Image->getSizeCacheUrl());
+        } catch (QUI\Exception $Exception) {
+            // @todo Projekt Social Icon definieren
+        }
     }
 }
