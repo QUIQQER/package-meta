@@ -14,7 +14,7 @@
     <settings>
 
         <category name="meta-settings">
-            <settings require="">
+            <settings require="" name="meta-settings-permalink">
                 <title>
                     <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title"/>
                 </title>
@@ -29,7 +29,7 @@
                 </input>
             </settings>
 
-            <settings>
+            <settings name="meta-settings-seo">
                 <title>
                     <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
                 </title>
