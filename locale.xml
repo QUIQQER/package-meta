@@ -101,8 +101,8 @@
 
         <!-- site settings -->
         <locale name="quiqqer.meta.settings.title">
-            <de><![CDATA[SEO & Social Einstellungen]]></de>
-            <en><![CDATA[SEO & Social settings]]></en>
+            <de><![CDATA[SEO & Meta Einstellungen]]></de>
+            <en><![CDATA[SEO & meta settings]]></en>
         </locale>
         <locale name="quiqqer.meta.site.title">
             <de><![CDATA[SEO Seitentitel]]></de>
@@ -120,15 +120,6 @@
             <de><![CDATA[SEO Beschreibung]]></de>
             <en><![CDATA[SEO description]]></en>
         </locale>
-        <locale name="quiqqer.meta.site.social.image.title">
-            <de><![CDATA[Social Bild]]></de>
-            <en><![CDATA[Social image]]></en>
-        </locale>
-        <locale name="quiqqer.meta.site.social.image.description">
-            <de><![CDATA[Dieses Bild wird als Vorschau im Social-Media angezeigt. (Facebook, Twitter, Google+)]]></de>
-            <en><![CDATA[This image is displayed as a preview in the social media. (Facebook, Twitter, Google+)]]></en>
-        </locale>
-
 
         <!-- robots index -->
         <locale name="quiqqer.meta.site.robots.index">
