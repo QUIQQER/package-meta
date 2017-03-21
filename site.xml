@@ -7,7 +7,6 @@
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.keywords</attribute>
         <attribute>quiqqer.meta.site.description</attribute>
-        <attribute>quiqqer.meta.site.social.image</attribute>
     </attributes>
 
     <!-- global site settings -->
@@ -33,12 +32,6 @@
                 <title>
                     <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
                 </title>
-
-                <input conf="quiqqer.meta.site.social.image" class="media-image">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.social.image.title"/>
-                    </text>
-                </input>
 
                 <select conf="quiqqer.meta.site.robots">
                     <text>
