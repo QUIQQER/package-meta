@@ -24,6 +24,7 @@ class Site
     public static function onInit($Site)
     {
         $Project = $Site->getProject();
+        $lang    = $Project->getLang();
 
         $title       = $Site->getAttribute('quiqqer.meta.site.title');
         $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
@@ -41,7 +42,8 @@ class Site
         }
 
         if (!$description || empty($description)) {
-            $localeDescription = QUI::getLocale()->get(
+            $localeDescription = QUI::getLocale()->getByLang(
+                $lang,
                 'quiqqer/meta',
                 'quiqqer.projects.description'
             );
@@ -57,7 +59,8 @@ class Site
 
         // meta kewords
         if (!$keywords) {
-            $localeKeywords = QUI::getLocale()->get(
+            $localeKeywords = QUI::getLocale()->getByLang(
+                $lang,
                 'quiqqer/meta',
                 'quiqqer.projects.keywords'
             );
