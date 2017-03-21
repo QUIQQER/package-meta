@@ -30,11 +30,14 @@
             <en><![CDATA[For the first site, you cannot set a permalink.]]></en>
         </locale>
         <locale name="exception.permalink.couldNotSet.site.has.permalink">
-            <de><![CDATA[Die Seite besitzt schon einen Permalink. bitte löschen Sie diesen bevor Sie einen neuen Permalink setzen.]]></de>
-            <en><![CDATA[The page already has a permalink. Please delete the permalink before you put a new permalink.]]></en>
+            <de>
+                <![CDATA[Die Seite besitzt schon einen Permalink. bitte löschen Sie diesen bevor Sie einen neuen Permalink setzen.]]></de>
+            <en>
+                <![CDATA[The page already has a permalink. Please delete the permalink before you put a new permalink.]]></en>
         </locale>
         <locale name="exception.permalink.couldNotSet.already.exists">
-            <de><![CDATA[Der Permalink konnte nicht gesetzt werden. Der Permalink wurde schon einer anderen Seite zugewiesen.]]></de>
+            <de>
+                <![CDATA[Der Permalink konnte nicht gesetzt werden. Der Permalink wurde schon einer anderen Seite zugewiesen.]]></de>
             <en><![CDATA[The permalink could not be set. The permalink was already assigned to another site.]]></en>
         </locale>
         <locale name="exception.permalink.not.found">
@@ -98,8 +101,8 @@
 
         <!-- site settings -->
         <locale name="quiqqer.meta.settings.title">
-            <de><![CDATA[SEO Einstellungen]]></de>
-            <en><![CDATA[SEO settings]]></en>
+            <de><![CDATA[SEO & Meta Einstellungen]]></de>
+            <en><![CDATA[SEO & meta settings]]></en>
         </locale>
         <locale name="quiqqer.meta.site.title">
             <de><![CDATA[SEO Seitentitel]]></de>
@@ -117,7 +120,6 @@
             <de><![CDATA[SEO Beschreibung]]></de>
             <en><![CDATA[SEO description]]></en>
         </locale>
-
 
         <!-- robots index -->
         <locale name="quiqqer.meta.site.robots.index">
