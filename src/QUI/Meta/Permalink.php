@@ -150,7 +150,7 @@ class Permalink
 
 
         if (!isset($result[0])) {
-            $params = explode(QUI\Rewrite::URL_PARAM_SEPERATOR, $url);
+            $params = explode(QUI\Rewrite::URL_PARAM_SEPARATOR, $url);
             $url    = $params[0] . QUI\Rewrite::getDefaultSuffix();
 
             $result = QUI::getDataBase()->fetch(array(
