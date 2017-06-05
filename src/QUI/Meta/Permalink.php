@@ -177,12 +177,12 @@ class Permalink
             );
         }
 
-        $_Project = \QUI::getProjectManager()->getProject(
+        $PermalinkProject = \QUI::getProjectManager()->getProject(
             $Project->getName(),
             $result[0]['lang']
         );
 
-        return $_Project->get($result[0]['id']);
+        return $PermalinkProject->get($result[0]['id']);
     }
 
     /**
@@ -273,7 +273,7 @@ class Permalink
      * @param \QUI\Rewrite $Rewrite
      * @param string $url
      */
-    public static function onRequest($Rewrite, $url)
+    public static function onRequest(QUI\Rewrite $Rewrite, $url)
     {
         // media files are irrelevant
         if (strpos($url, 'media/cache') !== false) {
