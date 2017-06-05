@@ -33,50 +33,49 @@
                 <categories>
                     <category name="meta">
                         <text>
-                            <locale group="quiqqer/meta" var="meta.project.settings.title" />
+                            <locale group="quiqqer/meta" var="meta.project.settings.title"/>
                         </text>
                         <icon>fa fa-file-text</icon>
 
                         <settings title="meta" name="meta">
                             <title>
-                                <locale group="quiqqer/meta" var="meta.project.settings.title" />
+                                <locale group="quiqqer/meta" var="meta.project.settings.title"/>
                             </title>
 
                             <select conf="meta.project.robots">
                                 <text>
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots" />
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots"/>
                                 </text>
 
                                 <option value="all">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all" />
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all"/>
                                 </option>
                                 <option value="noindex">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex" />
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex"/>
                                 </option>
                                 <option value="nofollow">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow" />
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
                                 </option>
                                 <option value="noindex, nofollow">
-                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow" />
+                                    <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow"/>
                                 </option>
-
                             </select>
 
                             <input conf="meta.project.publisher">
                                 <text>
-                                    <locale group="quiqqer/meta" var="meta.project.settings.publisher" />
+                                    <locale group="quiqqer/meta" var="meta.project.settings.publisher"/>
                                 </text>
                             </input>
 
                             <input conf="meta.project.copyright">
                                 <text>
-                                    <locale group="quiqqer/meta" var="meta.project.settings.copyright" />
+                                    <locale group="quiqqer/meta" var="meta.project.settings.copyright"/>
                                 </text>
                             </input>
 
                             <input conf="meta.project.revisit">
                                 <text>
-                                    <locale group="quiqqer/meta" var="meta.project.settings.revisit" />
+                                    <locale group="quiqqer/meta" var="meta.project.settings.revisit"/>
                                 </text>
                             </input>
                         </settings>
