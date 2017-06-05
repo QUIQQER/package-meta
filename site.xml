@@ -70,7 +70,7 @@
                     </text>
                 </input>
 
-                <textarea conf="quiqqer.meta.site.description">
+                <textarea conf="quiqqer.meta.site.description" data-qui="package/quiqqer/meta/bin/seo/Description">
                     <text>
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.description"/>
                     </text>

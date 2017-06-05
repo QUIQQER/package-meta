@@ -1,4 +1,3 @@
-
 /**
  * Permalink input control
  * Permalink control is for an site panel
@@ -19,133 +18,123 @@ define('package/quiqqer/meta/bin/permalink/Input', [
 
     'css!package/quiqqer/meta/bin/permalink/Input.css'
 
-], function(QUI, QUIControl, QUIButton, QUIConfirm, QUIInformation, Ajax, Locale)
-{
+], function (QUI, QUIControl, QUIButton, QUIConfirm, QUIInformation, Ajax, Locale) {
     "use strict";
 
     var lg = 'quiqqer/meta';
 
     return new Class({
 
-        Type    : 'package/quiqqer/meta/bin/permalink/Input',
-        Extends : QUIControl,
+        Type   : 'package/quiqqer/meta/bin/permalink/Input',
+        Extends: QUIControl,
 
-        Binds : [
+        Binds: [
             'deletePermalink',
             '$onImport'
         ],
 
-        initialize : function(options)
-        {
-            this.parent( options );
+        initialize: function (options) {
+            this.parent(options);
 
             this.$Input        = null;
             this.$DeleteButton = null;
 
             this.addEvents({
-                onImport : this.$onImport
+                onImport: this.$onImport
             });
         },
 
         /**
          * event : on import
          */
-        $onImport : function()
-        {
+        $onImport: function () {
             var Container = new Element('div', {
-                'data-quiid' : this.getId(),
-                styles : {
-                    'float' : 'left'
+                'data-quiid': this.getId(),
+                styles      : {
+                    'float': 'left'
                 }
             });
 
             this.$Input = this.$Elm.clone();
-            this.$Input.inject( Container );
+            this.$Input.inject(Container);
 
             this.$Input.setStyles({
-                'float' : 'left'
+                'float': 'left'
             });
 
-            this.$Input.addClass( 'meta-permalink-input' );
+            this.$Input.addClass('meta-permalink-input');
 
             // delete button
             this.$DeleteButton = new QUIButton({
-                text     : Locale.get( lg, 'meta.permalink.button.delete.text' ),
-                disabled : true,
-                events   : {
-                    onClick : this.deletePermalink
+                text    : Locale.get(lg, 'meta.permalink.button.delete.text'),
+                disabled: true,
+                events  : {
+                    onClick: this.deletePermalink
                 }
-            }).inject( Container );
+            }).inject(Container);
 
-            if ( this.$Input.value !== '' )
-            {
+            if (this.$Input.value !== '') {
                 this.$Input.disabled = true;
                 this.$DeleteButton.enable();
             }
 
-            Container.replaces( this.$Elm );
+            Container.replaces(this.$Elm);
 
             this.$Elm = Container;
 
 
             // id 1 cant have a permalink
-            var PanelElm = this.$Elm.getParent( '.qui-panel' ),
-                Panel    = QUI.Controls.getById( PanelElm.get( 'data-quiid' ) ),
+            var PanelElm = this.$Elm.getParent('.qui-panel'),
+                Panel    = QUI.Controls.getById(PanelElm.get('data-quiid')),
                 Site     = Panel.getSite();
 
-            if ( Site.getId() == 1 )
-            {
+            if (Site.getId() == 1) {
                 this.$Input.disabled = true;
 
                 new QUIInformation({
-                    message : Locale.get( lg, 'exception.permalink.firstChild.cant.have.permalink' ),
-                    styles  : {
-                        marginBottom : 10
+                    message: Locale.get(lg, 'exception.permalink.firstChild.cant.have.permalink'),
+                    styles : {
+                        marginBottom: 10
                     }
-                }).inject( this.$Elm );
+                }).inject(this.$Elm);
             }
         },
 
         /**
          * Delete the permalink
          */
-        deletePermalink : function()
-        {
-            if ( this.$Input.value === '' ) {
+        deletePermalink: function () {
+            if (this.$Input.value === '') {
                 return;
             }
 
             var self     = this,
-                PanelElm = this.$Elm.getParent( '.qui-panel' ),
-                Panel    = QUI.Controls.getById( PanelElm.get( 'data-quiid' ) ),
+                PanelElm = this.$Elm.getParent('.qui-panel'),
+                Panel    = QUI.Controls.getById(PanelElm.get('data-quiid')),
 
                 Site     = Panel.getSite(),
                 Project  = Site.getProject();
 
             new QUIConfirm({
-                title     : Locale.get( lg, 'meta.permalink.window.delete.title' ),
-                maxHeight : 300,
-                maxWidth  : 500,
-                autoclose : false,
-                text      : Locale.get( lg, 'meta.permalink.window.delete.text', {
-                    id : Site.getId()
+                title    : Locale.get(lg, 'meta.permalink.window.delete.title'),
+                maxHeight: 300,
+                maxWidth : 500,
+                autoclose: false,
+                text     : Locale.get(lg, 'meta.permalink.window.delete.text', {
+                    id: Site.getId()
                 }),
-                events :
-                {
-                    onOpen : function() {
+                events   : {
+                    onOpen: function () {
                         Panel.Loader.show();
                     },
 
-                    onSubmit : function(Win)
-                    {
+                    onSubmit: function (Win) {
                         Win.Loader.show();
 
-                        Ajax.post('package_quiqqer_meta_ajax_permalink_delete', function(result)
-                        {
+                        Ajax.post('package_quiqqer_meta_ajax_permalink_delete', function (result) {
                             self.$Input.value = result;
 
-                            if ( self.$Input.value === '' )
-                            {
+                            if (self.$Input.value === '') {
                                 self.$Input.disabled = false;
                                 self.$DeleteButton.disable();
                             }
@@ -154,17 +143,17 @@ define('package/quiqqer/meta/bin/permalink/Input', [
                             Panel.Loader.hide();
 
                         }, {
-                            project   : Project.getName(),
-                            lang      : Project.getLang(),
-                            id        : Site.getId(),
-                            'package' : 'quiqqer/meta',
-                            onError   : function() {
+                            project  : Project.getName(),
+                            lang     : Project.getLang(),
+                            id       : Site.getId(),
+                            'package': 'quiqqer/meta',
+                            onError  : function () {
                                 Panel.Loader.hide();
                             }
                         });
                     },
 
-                    onCancel : function() {
+                    onCancel: function () {
                         Panel.Loader.hide();
                     }
                 }

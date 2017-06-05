@@ -14,6 +14,17 @@
             <de><![CDATA[Möchten Sie den Permalink für die Seite #[id] wirklich löschen?]]></de>
             <en><![CDATA[Do you really want to delete the permalink of the site #[id]]]></en>
         </locale>
+
+        <locale name="message.seo.description.length" html="true">
+            <de><![CDATA[
+                Die SEO Beschreibung sollte nicht länger als 150 Zeichen lang ein.<br />
+                <b>Verwendete Zeichen: [length]</b>
+            ]]></de>
+            <en><![CDATA[
+                The SEO description should not be longer than 150 characters.<br />
+                <b>Characters used: [length]</b>
+            ]]></en>
+        </locale>
     </groups>
 
     <groups name="quiqqer/meta" datatype="php,js">
