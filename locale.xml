@@ -33,8 +33,8 @@
             <en><![CDATA[QUIQQER - META]]></en>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[SEO - META - Permalink Plugin für QUIQQER]]></de>
-            <en><![CDATA[SEO - META - Permalink Plugin for QUIQQER]]></en>
+            <de><![CDATA[Das Meta Plugin hilft Ihnen bei der Eingabe von Metadaten, welche für die Suchmaschinen Optimierung (SEO) ausschlaggebend sind.]]></de>
+            <en><![CDATA[The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).]]></en>
         </locale>
 
         <locale name="message.permalink.could.not.set">
