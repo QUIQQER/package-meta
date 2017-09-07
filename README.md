@@ -1,3 +1,4 @@
+![QUIQQER Meta](bin/images/Readme.jpg)
 
 QUIQQER SEO - META - Permalink Plugin
 ========
