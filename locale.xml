@@ -17,7 +17,7 @@
 
         <locale name="message.seo.description.length" html="true">
             <de><![CDATA[
-                Die SEO Beschreibung sollte nicht länger als 150 Zeichen lang ein.<br />
+                Die SEO Beschreibung sollte nicht länger als 150 Zeichen lang sein.<br />
                 <b>Verwendete Zeichen: [length]</b>
             ]]></de>
             <en><![CDATA[
