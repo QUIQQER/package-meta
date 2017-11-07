@@ -42,15 +42,6 @@ define('package/quiqqer/meta/bin/seo/Description', [
          */
         $onImport: function () {
             this.getElm().addEvent('keyup', this.$onKeyUp);
-
-            this.$Display = new Element('div', {
-                styles: {
-                    padding  : 5,
-                    textAlign: 'right',
-                    width    : '100%'
-                }
-            }).inject(this.getElm(), 'after');
-
             this.$onKeyUp();
         },
 
@@ -60,8 +51,11 @@ define('package/quiqqer/meta/bin/seo/Description', [
         $onKeyUp: function () {
             var value = this.getElm().value;
 
-            this.$Display.innerHTML = QUILocale.get(
-                'quiqqer/meta',
+            // Get description field beneath/for input
+            var Description = this.getElm().getParent().getParent().getElementsByClassName('field-container-item-desc')[0];
+
+            Description.innerHTML = QUILocale.get(
+                lg,
                 'message.seo.description.length',
                 {length: value.length}
             );
