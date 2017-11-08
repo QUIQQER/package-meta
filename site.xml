@@ -79,7 +79,7 @@
 
                         <textarea conf="quiqqer.meta.site.description"
                                   data-qui="package/quiqqer/meta/bin/seo/Description"
-                                  rows="7">
+                                  style="height: 100px;">
                             <text>
                                 <locale group="quiqqer/meta" var="quiqqer.meta.site.description"/>
                             </text>
