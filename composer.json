@@ -2,7 +2,7 @@
     "name" : "quiqqer/meta",
     "type" : "quiqqer-module",
     "description" : "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
-    "version" : "dev-dev",
+    "version" : "dev-master",
     "license" : "GPL-3.0+",
 
     "authors" : [{
