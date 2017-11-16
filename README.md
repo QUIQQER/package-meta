@@ -3,9 +3,9 @@
 QUIQQER SEO - META - Permalink Plugin
 ========
 
-SEO - META - Permalink Plugin für QUIQQER
+SEO - META - Permalink Plugin for QUIQQER
 
-Paketname:
+Package Name:
 
     quiqqer/meta
 
@@ -13,19 +13,20 @@ Paketname:
 Features
 --------
 
-- META Daten können für einzelne Seiten gesetzt werden
-- Permalinks können für einzelne Seiten gesetzt werden
-- SEO Hilfe
+- META data can be set for pages individually
+- Permalinks can be set for pages individually
+- SEO help
 
 Installation
 ------------
 
-Der Paketname ist: quiqqer/meta
+The package name is: quiqqer/meta
 
 
-Mitwirken
+Contribute
 ----------
 
+- Project: https://dev.quiqqer.com/quiqqer/package-meta
 - Source Code: https://dev.quiqqer.com/quiqqer/package-meta/tree/master
 - Issue Tracker: https://dev.quiqqer.com/quiqqer/package-meta/issues
 
@@ -33,16 +34,13 @@ Mitwirken
 Support
 -------
 
-Falls Sie Fehler gefunden, Wünsche oder Verbesserungsvorschläge haben, 
-können Sie uns gern per Mail an support@pcsg.de darüber informieren.  
-Wir werden versuchen auf Ihre Wünsche einzugehen bzw. diese an die 
-zuständigen Entwickler des Projektes weiterleiten.
+If you have found errors, wishes or suggestions for improvement,
+you can contact us by email at [support@pcsg.de](mailto:support@pcsg.de).
+
+We will try to meet your needs or send them to the responsible developers
+of the project.
 
 License
 -------
 
-- GPL-2.0+
-
-Entwickler
---------
-
+- GPL-3.0+

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-
     <!-- extra attributes -->
     <attributes>
+        <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.title</attribute>
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.keywords</attribute>
@@ -10,75 +10,86 @@
     </attributes>
 
     <!-- global site settings -->
-    <settings>
+    <window>
+        <tab name="meta-settings">
+            <text>
+                <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
+            </text>
+            <image>fa fa-tags</image>
 
-        <category name="meta-settings">
-            <settings require="" name="meta-settings-permalink">
-                <title>
-                    <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title"/>
-                </title>
+            <categories>
+                <category>
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title"/>
+                        </title>
 
-                <input conf="quiqqer.package.meta.permalink" data-qui="package/quiqqer/meta/bin/permalink/Input">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink"/>
-                    </text>
-                    <description>
-                        <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description"/>
-                    </description>
-                </input>
-            </settings>
+                        <input conf="quiqqer.meta.site.permalink" data-qui="package/quiqqer/meta/bin/permalink/Input">
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description"/>
+                            </description>
+                        </input>
+                    </settings>
 
-            <settings name="meta-settings-seo">
-                <title>
-                    <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
-                </title>
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
+                        </title>
 
-                <select conf="quiqqer.meta.site.robots">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots"/>
-                    </text>
+                        <select conf="quiqqer.meta.site.robots">
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots"/>
+                            </text>
 
-                    <option value="index">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index"/>
-                    </option>
-                    <option value="noindex">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex"/>
-                    </option>
-                    <option value="nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
-                    </option>
-                    <option value="nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
-                    </option>
-                    <option value="noindex, nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow"/>
-                    </option>
-                    <option value="all">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all"/>
-                    </option>
-                </select>
+                            <option value="index">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.index"/>
+                            </option>
+                            <option value="noindex">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex"/>
+                            </option>
+                            <option value="nofollow">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
+                            </option>
+                            <option value="nofollow">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
+                            </option>
+                            <option value="noindex, nofollow">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow"/>
+                            </option>
+                            <option value="all">
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.all"/>
+                            </option>
+                        </select>
 
-                <input conf="quiqqer.meta.site.title">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.title"/>
-                    </text>
-                </input>
+                        <input conf="quiqqer.meta.site.title">
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.title"/>
+                            </text>
+                        </input>
 
-                <input conf="quiqqer.meta.site.keywords">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords"/>
-                    </text>
-                </input>
+                        <input conf="quiqqer.meta.site.keywords">
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords"/>
+                            </text>
+                        </input>
 
-                <textarea conf="quiqqer.meta.site.description" data-qui="package/quiqqer/meta/bin/seo/Description">
-                    <text>
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.description"/>
-                    </text>
-                </textarea>
 
-            </settings>
-        </category>
-
-    </settings>
-
+                        <textarea conf="quiqqer.meta.site.description"
+                                  data-qui="package/quiqqer/meta/bin/seo/Description"
+                                  style="height: 100px;">
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.description"/>
+                            </text>
+                            <description>
+                                Placeholder, will be replaced via JS in input's control
+                            </description>
+                        </textarea>
+                    </settings>
+                </category>
+            </categories>
+        </tab>
+    </window>
 </site>
