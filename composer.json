@@ -1,28 +1,26 @@
 {
-    "name" : "quiqqer/meta",
-    "type" : "quiqqer-module",
-    "description" : "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
-    "version" : "dev-master",
-    "license" : "GPL-3.0+",
-
-    "authors" : [{
-        "name": "Henning Leutz",
-        "email": "leutz@pcsg.de",
-        "homepage": "http://www.pcsg.de",
-        "role": "Developer"
-    }],
-
-    "support" : {
-        "email" : "support@pcsg.de"
-    },
-
-    "require": {
-        "quiqqer/quiqqer" : "*"
-    },
-
-    "autoload": {
-        "psr-0" : {
-            "QUI" : "src/"
-        }
+  "name": "quiqqer\/meta",
+  "type": "quiqqer-module",
+  "description": "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
+  "version": "dev-dev",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Henning Leutz",
+      "email": "leutz@pcsg.de",
+      "homepage": "http:\/\/www.pcsg.de",
+      "role": "Developer"
     }
+  ],
+  "support": {
+    "email": "support@pcsg.de"
+  },
+  "require": {
+    "quiqqer\/quiqqer": "*"
+  },
+  "autoload": {
+    "psr-0": {
+      "QUI": "src\/"
+    }
+  }
 }

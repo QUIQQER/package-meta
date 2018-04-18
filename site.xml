@@ -34,6 +34,7 @@
                         </input>
                     </settings>
 
+
                     <settings>
                         <title>
                             <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
@@ -49,9 +50,6 @@
                             </option>
                             <option value="noindex">
                                 <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex"/>
-                            </option>
-                            <option value="nofollow">
-                                <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
                             </option>
                             <option value="nofollow">
                                 <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
