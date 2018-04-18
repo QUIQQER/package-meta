@@ -47,9 +47,6 @@
                     <option value="nofollow">
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
                     </option>
-                    <option value="nofollow">
-                        <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.nofollow"/>
-                    </option>
                     <option value="noindex, nofollow">
                         <locale group="quiqqer/meta" var="quiqqer.meta.site.robots.noindex_nofollow"/>
                     </option>
