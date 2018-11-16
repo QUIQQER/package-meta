@@ -4,7 +4,7 @@
     <attributes>
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.title</attribute>
-        <attribute>quiqqer.meta.site.robots</attribute>
+        <attribute>quiqqer.meta.site.permalink</attribute>
         <attribute>quiqqer.meta.site.keywords</attribute>
         <attribute>quiqqer.meta.site.description</attribute>
     </attributes>
