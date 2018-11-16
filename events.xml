@@ -2,6 +2,7 @@
 <events>
     <event on="onSiteInit" fire="\QUI\Meta\Site::onInit" />
     <event on="onSiteSave" fire="\QUI\Meta\Permalink::onSave" />
+    <event on="onSiteSaveBefore" fire="\QUI\Meta\Permalink::onSiteSaveBefore" />
     <event on="onSiteLoad" fire="\QUI\Meta\Permalink::onLoad" />
     <event on="onRequest" fire="\QUI\Meta\Permalink::onRequest" />
 </events>

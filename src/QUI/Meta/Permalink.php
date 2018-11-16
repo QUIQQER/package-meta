@@ -80,11 +80,6 @@ class Permalink
 
         // @todo permalink prüfen ob dieser verwendet werden darf
 
-        // clear
-        $permalink = str_replace(' ', '-', $permalink);
-        $permalink = str_replace(':', '', $permalink);
-        $permalink = str_replace('/', '', $permalink);
-
         QUI::getDataBase()->insert($table, [
             'id'   => $Site->getId(),
             'lang' => $Project->getLang(),
@@ -214,6 +209,19 @@ class Permalink
      *
      * @param \QUI\Projects\Site\Edit $Site
      */
+    public static function onSiteSaveBefore($Site)
+    {
+        $permalink = $Site->getAttribute('quiqqer.meta.site.permalink');
+        $permalink = QUI\Projects\Site\Utils::clearUrl($permalink, $Site->getProject());
+
+        $Site->setAttribute('quiqqer.meta.site.permalink', $permalink);
+    }
+
+    /**
+     * Event : on site save
+     *
+     * @param \QUI\Projects\Site\Edit $Site
+     */
     public static function onSave($Site)
     {
         if (!$Site->getAttribute('quiqqer.meta.site.permalink')) {
@@ -221,6 +229,7 @@ class Permalink
         }
 
         $permalink = $Site->getAttribute('quiqqer.meta.site.permalink');
+        $permalink = QUI\Projects\Site\Utils::clearUrl($permalink, $Site->getProject());
 
         try {
             $oldLink = self::getPermalinkFor($Site);
