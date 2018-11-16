@@ -5,7 +5,6 @@
  * @module package/quiqqer/meta/bin/permalink/Input
  * @author www.pcsg.de (Henning Leutz)
  */
-
 define('package/quiqqer/meta/bin/permalink/Input', [
 
     'qui/QUI',
@@ -50,17 +49,14 @@ define('package/quiqqer/meta/bin/permalink/Input', [
         $onImport: function () {
             var Container = new Element('div', {
                 'data-quiid': this.getId(),
+                'class'     : 'field-container-field field-container-field-no-padding',
                 styles      : {
-                    'float': 'left'
+                    display: 'flex'
                 }
             });
 
             this.$Input = this.$Elm.clone();
             this.$Input.inject(Container);
-
-            this.$Input.setStyles({
-                'float': 'left'
-            });
 
             this.$Input.addClass('meta-permalink-input');
 
@@ -68,6 +64,10 @@ define('package/quiqqer/meta/bin/permalink/Input', [
             this.$DeleteButton = new QUIButton({
                 text    : Locale.get(lg, 'meta.permalink.button.delete.text'),
                 disabled: true,
+                styles  : {
+                    borderRadius: 0,
+                    'float'     : 'none'
+                },
                 events  : {
                     onClick: this.deletePermalink
                 }
@@ -88,7 +88,7 @@ define('package/quiqqer/meta/bin/permalink/Input', [
                 Panel    = QUI.Controls.getById(PanelElm.get('data-quiid')),
                 Site     = Panel.getSite();
 
-            if (Site.getId() == 1) {
+            if (Site.getId() === 1) {
                 this.$Input.disabled = true;
 
                 new QUIInformation({
@@ -124,10 +124,9 @@ define('package/quiqqer/meta/bin/permalink/Input', [
                     id: Site.getId()
                 }),
                 events   : {
-                    onOpen: function () {
+                    onOpen  : function () {
                         Panel.Loader.show();
                     },
-
                     onSubmit: function (Win) {
                         Win.Loader.show();
 
@@ -141,7 +140,6 @@ define('package/quiqqer/meta/bin/permalink/Input', [
 
                             Win.close();
                             Panel.Loader.hide();
-
                         }, {
                             project  : Project.getName(),
                             lang     : Project.getLang(),
@@ -152,7 +150,6 @@ define('package/quiqqer/meta/bin/permalink/Input', [
                             }
                         });
                     },
-
                     onCancel: function () {
                         Panel.Loader.hide();
                     }

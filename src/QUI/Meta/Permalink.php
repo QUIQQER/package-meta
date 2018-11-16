@@ -82,12 +82,14 @@ class Permalink
 
         // clear
         $permalink = str_replace(' ', '-', $permalink);
+        $permalink = str_replace(':', '', $permalink);
+        $permalink = str_replace('/', '', $permalink);
 
-        QUI::getDataBase()->insert($table, array(
+        QUI::getDataBase()->insert($table, [
             'id'   => $Site->getId(),
             'lang' => $Project->getLang(),
             'link' => $permalink
-        ));
+        ]);
 
         return true;
     }
@@ -105,14 +107,14 @@ class Permalink
         $Project = $Site->getProject();
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $result = QUI::getDataBase()->fetch(array(
+        $result = QUI::getDataBase()->fetch([
             'from'  => $table,
-            'where' => array(
+            'where' => [
                 'id'   => $Site->getId(),
                 'lang' => $Project->getLang()
-            ),
+            ],
             'limit' => 1
-        ));
+        ]);
 
         if (!isset($result[0])) {
             throw new QUI\Exception(
@@ -140,26 +142,26 @@ class Permalink
     {
         $table = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        $result = QUI::getDataBase()->fetch(array(
+        $result = QUI::getDataBase()->fetch([
             'from'  => $table,
-            'where' => array(
+            'where' => [
                 'link' => $url
-            ),
+            ],
             'limit' => 1
-        ));
+        ]);
 
 
         if (!isset($result[0])) {
             $params = explode(QUI\Rewrite::URL_PARAM_SEPARATOR, $url);
-            $url    = $params[0] . QUI\Rewrite::getDefaultSuffix();
+            $url    = $params[0].QUI\Rewrite::getDefaultSuffix();
 
-            $result = QUI::getDataBase()->fetch(array(
+            $result = QUI::getDataBase()->fetch([
                 'from'  => $table,
-                'where' => array(
+                'where' => [
                     'link' => $url
-                ),
+                ],
                 'limit' => 1
-            ));
+            ]);
 
             if (isset($result[0])) {
                 $_Project = QUI::getProjectManager()->getProject(
@@ -197,10 +199,10 @@ class Permalink
         $Project = $Site->getProject();
         $table   = QUI::getDBProjectTableName('meta_permalink', $Project, false);
 
-        QUI::getDataBase()->delete($table, array(
+        QUI::getDataBase()->delete($table, [
             'id'   => $Site->getId(),
             'lang' => $Project->getLang()
-        ));
+        ]);
     }
 
     /**
@@ -214,11 +216,11 @@ class Permalink
      */
     public static function onSave($Site)
     {
-        if (!$Site->getAttribute('quiqqer.package.meta.permalink')) {
+        if (!$Site->getAttribute('quiqqer.meta.site.permalink')) {
             return;
         }
 
-        $permalink = $Site->getAttribute('quiqqer.package.meta.permalink');
+        $permalink = $Site->getAttribute('quiqqer.meta.site.permalink');
 
         try {
             $oldLink = self::getPermalinkFor($Site);
@@ -284,10 +286,9 @@ class Permalink
             return;
         }
 
-        $Project = $Rewrite->getProject();
-
         try {
-            $Site = self::getSiteByPermalink($Project, $url);
+            $Project = $Rewrite->getProject();
+            $Site    = self::getSiteByPermalink($Project, $url);
             $Rewrite->setSite($Site);
         } catch (QUI\Exception $Exception) {
         }
