@@ -3,7 +3,7 @@
 QUIQQER SEO - META - Permalink Plugin
 ========
 
-SEO - META - Permalink Plugin for QUIQQER
+SEO- & META-Plugin for QUIQQER
 
 Package Name:
 
@@ -14,7 +14,6 @@ Features
 --------
 
 - META data can be set for pages individually
-- Permalinks can be set for pages individually
 - SEO help
 
 Installation

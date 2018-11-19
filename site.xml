@@ -4,7 +4,6 @@
     <attributes>
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.title</attribute>
-        <attribute>quiqqer.meta.site.permalink</attribute>
         <attribute>quiqqer.meta.site.keywords</attribute>
         <attribute>quiqqer.meta.site.description</attribute>
     </attributes>
@@ -19,22 +18,6 @@
 
             <categories>
                 <category>
-                    <settings>
-                        <title>
-                            <locale group="quiqqer/meta" var="quiqqer.permalink.settings.title"/>
-                        </title>
-
-                        <input conf="quiqqer.meta.site.permalink" data-qui="package/quiqqer/meta/bin/permalink/Input">
-                            <text>
-                                <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink"/>
-                            </text>
-                            <description>
-                                <locale group="quiqqer/meta" var="quiqqer.package.meta.permalink.description"/>
-                            </description>
-                        </input>
-                    </settings>
-
-
                     <settings>
                         <title>
                             <locale group="quiqqer/meta" var="quiqqer.meta.settings.title"/>
