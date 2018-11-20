@@ -19,8 +19,8 @@
     "quiqqer\/quiqqer": "*"
   },
   "autoload": {
-    "psr-0": {
-      "QUI": "src\/"
+    "psr-4": {
+      "QUI\\Meta\\": "src/QUI/Meta"
     }
   }
 }
