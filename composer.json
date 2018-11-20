@@ -22,5 +22,8 @@
     "psr-4": {
       "QUI\\Meta\\": "src/QUI/Meta"
     }
+  },
+  "suggest": {
+    "quiqqer/permalinks": "If you want to continue using the permalink feature, you need the quiqqer/permalinks package."
   }
 }
