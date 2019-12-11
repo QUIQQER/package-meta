@@ -1,29 +1,28 @@
 {
-  "name": "quiqqer\/meta",
-  "type": "quiqqer-module",
-  "description": "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
-  "version": "dev-dev",
-  "license": "GPL-3.0+",
-  "authors": [
-    {
-      "name": "Henning Leutz",
-      "email": "leutz@pcsg.de",
-      "homepage": "http:\/\/www.pcsg.de",
-      "role": "Developer"
+    "name": "quiqqer\/meta",
+    "type": "quiqqer-module",
+    "description": "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Henning Leutz",
+            "email": "leutz@pcsg.de",
+            "homepage": "http:\/\/www.pcsg.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@pcsg.de"
+    },
+    "require": {
+        "quiqqer\/quiqqer": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "QUI\\Meta\\": "src\/QUI\/Meta"
+        }
+    },
+    "suggest": {
+        "quiqqer\/permalinks": "If you want to continue using the permalink feature, you need the quiqqer\/permalinks package."
     }
-  ],
-  "support": {
-    "email": "support@pcsg.de"
-  },
-  "require": {
-    "quiqqer\/quiqqer": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "QUI\\Meta\\": "src/QUI/Meta"
-    }
-  },
-  "suggest": {
-    "quiqqer/permalinks": "If you want to continue using the permalink feature, you need the quiqqer/permalinks package."
-  }
 }
