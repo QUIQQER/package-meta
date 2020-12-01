@@ -122,8 +122,8 @@ class Site
             $publisher = '';
         }
 
-
         $Site->setAttribute('meta.revisit', $revisit);
+        $Site->setAttribute('meta.itemscope', 'http://schema.org/WebPage');
 
         $Site->setAttribute('meta.seotitle', $title);
         $Site->setAttribute('meta.robots', $robots);
