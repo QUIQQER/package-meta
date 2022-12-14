@@ -28,7 +28,6 @@ class Site
 
         $title       = $Site->getAttribute('quiqqer.meta.site.title');
         $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
-        $keywords    = $Site->getAttribute('quiqqer.meta.site.keywords');
         $description = $Site->getAttribute('quiqqer.meta.site.description');
         $canonical   = $Site->getAttribute('quiqqer.meta.site.canonical');
 
@@ -56,19 +55,6 @@ class Site
 
         if (!$description) {
             $description = '';
-        }
-
-        // meta kewords
-        if (!$keywords) {
-            $localeKeywords = QUI::getLocale()->getByLang(
-                $lang,
-                'quiqqer/meta',
-                'quiqqer.projects.keywords'
-            );
-
-            if (!empty($localeKeywords)) {
-                $keywords = $localeKeywords;
-            }
         }
 
         // meta title
@@ -111,10 +97,6 @@ class Site
             $description = '';
         }
 
-        if (!$keywords) {
-            $keywords = '';
-        }
-
         if (!$copyright) {
             $copyright = '';
         }
@@ -129,7 +111,6 @@ class Site
         $Site->setAttribute('meta.seotitle', $title);
         $Site->setAttribute('meta.robots', $robots);
         $Site->setAttribute('meta.description', $description);
-        $Site->setAttribute('meta.keywords', $keywords);
 
         $Site->setAttribute('meta.copyright', $copyright);
         $Site->setAttribute('meta.publisher', $publisher);
