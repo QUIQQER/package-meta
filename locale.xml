@@ -20,8 +20,10 @@
             <en><![CDATA[QUIQQER - META]]></en>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[Das Meta Plugin hilft Ihnen bei der Eingabe von Metadaten, welche für die Suchmaschinen Optimierung (SEO) ausschlaggebend sind.]]></de>
-            <en><![CDATA[The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).]]></en>
+            <de>
+                <![CDATA[Das Meta Plugin hilft Ihnen bei der Eingabe von Metadaten, welche für die Suchmaschinen Optimierung (SEO) ausschlaggebend sind.]]></de>
+            <en>
+                <![CDATA[The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).]]></en>
         </locale>
     </groups>
 
@@ -95,6 +97,27 @@
         <locale name="quiqqer.meta.site.robots.all">
             <de><![CDATA[Inhalte der Seite und aus untergeordneten Seiten besuchen und indizieren]]></de>
             <en><![CDATA[Visit child pages and allow indexing of child pages]]></en>
+        </locale>
+
+        <locale name="quiqqer.meta.site.canonicalLink">
+            <de><![CDATA[Canonical Link]]></de>
+            <en><![CDATA[Canonical link]]></en>
+        </locale>
+        <locale name="quiqqer.meta.site.canonicalLink.description" html="true">
+            <de><![CDATA[
+            Der Canonical Tag ist eine Anweisung auf einer Unterseite der für Suchmaschinen beschreibt,
+            auf welcher URL sich das Original dieser Seite befindet.
+            <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=de" target="_blank">
+                Möchtest du mehr wissen, besuche hierzu die folgende Seite
+            </a>.
+            ]]></de>
+            <en><![CDATA[
+            The canonical tag is a statement on a subpage that describes for search engines,
+            on which URL the original of this page is located.
+            <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">
+                If you want to know more, please visit the following page
+            </a>.
+            ]]></en>
         </locale>
 
     </groups>

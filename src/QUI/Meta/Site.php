@@ -30,6 +30,7 @@ class Site
         $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
         $keywords    = $Site->getAttribute('quiqqer.meta.site.keywords');
         $description = $Site->getAttribute('quiqqer.meta.site.description');
+        $canonical   = $Site->getAttribute('quiqqer.meta.site.canonical');
 
         $revisit   = '';
         $publisher = '';
@@ -132,5 +133,9 @@ class Site
 
         $Site->setAttribute('meta.copyright', $copyright);
         $Site->setAttribute('meta.publisher', $publisher);
+
+        if (!empty($canonical)) {
+            $Site->setAttribute('meta.canonical', $canonical);
+        }
     }
 }
