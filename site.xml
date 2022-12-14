@@ -4,8 +4,8 @@
     <attributes>
         <attribute>quiqqer.meta.site.robots</attribute>
         <attribute>quiqqer.meta.site.title</attribute>
-        <attribute>quiqqer.meta.site.keywords</attribute>
         <attribute>quiqqer.meta.site.description</attribute>
+        <attribute>quiqqer.meta.site.canonical</attribute>
     </attributes>
 
     <!-- global site settings -->
@@ -51,13 +51,6 @@
                             </text>
                         </input>
 
-                        <input conf="quiqqer.meta.site.keywords">
-                            <text>
-                                <locale group="quiqqer/meta" var="quiqqer.meta.site.keywords"/>
-                            </text>
-                        </input>
-
-
                         <textarea conf="quiqqer.meta.site.description"
                                   data-qui="package/quiqqer/meta/bin/seo/Description"
                                   style="height: 100px;">
@@ -68,6 +61,20 @@
                                 Placeholder, will be replaced via JS in input's control
                             </description>
                         </textarea>
+
+
+                        <input conf="quiqqer.meta.site.canonical"
+                               data-qui="controls/projects/project/site/Input"
+                               data-qui-options-external="1"
+                        >
+                            <text>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.canonicalLink"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/meta" var="quiqqer.meta.site.canonicalLink.description"/>
+                            </description>
+                        </input>
+
                     </settings>
                 </category>
             </categories>
