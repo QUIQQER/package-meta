@@ -10,7 +10,7 @@ use QUI;
 
 /**
  * Meta Site class
- * Set the meta data for \QUI\Projects\Site Objects
+ * Set the metadata for \QUI\Projects\Site Objects
  *
  * @author www.pcsg.de (Henning Leutz)
  */
@@ -24,14 +24,14 @@ class Site
     public static function onInit($Site)
     {
         $Project = $Site->getProject();
-        $lang    = $Project->getLang();
+        $lang = $Project->getLang();
 
-        $title       = $Site->getAttribute('quiqqer.meta.site.title');
-        $robots      = $Site->getAttribute('quiqqer.meta.site.robots');
+        $title = $Site->getAttribute('quiqqer.meta.site.title');
+        $robots = $Site->getAttribute('quiqqer.meta.site.robots');
         $description = $Site->getAttribute('quiqqer.meta.site.description');
-        $canonical   = $Site->getAttribute('quiqqer.meta.site.canonical');
+        $canonical = $Site->getAttribute('quiqqer.meta.site.canonical');
 
-        $revisit   = '';
+        $revisit = '';
         $publisher = '';
         $copyright = '';
 
