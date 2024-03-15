@@ -19,9 +19,9 @@ class Site
     /**
      * event on site init
      *
-     * @param \QUI\Projects\Site $Site
+     * @param QUI\Interfaces\Projects\Site $Site
      */
-    public static function onInit($Site)
+    public static function onInit(QUI\Interfaces\Projects\Site $Site): void
     {
         $Project = $Site->getProject();
         $lang = $Project->getLang();
@@ -31,17 +31,12 @@ class Site
         $description = $Site->getAttribute('quiqqer.meta.site.description');
         $canonical = $Site->getAttribute('quiqqer.meta.site.canonical');
 
-        $revisit = '';
-        $publisher = '';
-        $copyright = '';
-
-
         // meta description
         if (!$description) {
             $description = $Site->getAttribute('short');
         }
 
-        if (!$description || empty($description)) {
+        if (empty($description)) {
             $localeDescription = QUI::getLocale()->getByLang(
                 $lang,
                 'quiqqer/meta',
@@ -57,29 +52,17 @@ class Site
             $description = '';
         }
 
-        // meta title
         if (!$title) {
             $title = $Site->getAttribute('title');
         }
 
-
-        // settings
         if (!$robots) {
             $robots = $Project->getConfig('meta.project.robots');
         }
 
-        if (empty($publisher)) {
-            $publisher = $Project->getConfig('meta.project.publisher');
-        }
-
-        if (empty($copyright)) {
-            $copyright = $Project->getConfig('meta.project.copyright');
-        }
-
-        if (empty($revisit)) {
-            $revisit = $Project->getConfig('meta.project.revisit');
-        }
-
+        $publisher = $Project->getConfig('meta.project.publisher');
+        $copyright = $Project->getConfig('meta.project.copyright');
+        $revisit = $Project->getConfig('meta.project.revisit');
 
         if (!$revisit) {
             $revisit = '';
@@ -106,7 +89,7 @@ class Site
         }
 
         $Site->setAttribute('meta.revisit', $revisit);
-        $Site->setAttribute('meta.itemscope', 'http://schema.org/WebPage');
+        $Site->setAttribute('meta.itemscope', 'https://schema.org/WebPage');
 
         $Site->setAttribute('meta.seotitle', $title);
         $Site->setAttribute('meta.robots', $robots);
