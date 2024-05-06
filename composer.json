@@ -15,7 +15,7 @@
     "email": "support@pcsg.de"
   },
   "require": {
-    "quiqqer\/core": "^2"
+    "quiqqer/core": "^2"
   },
   "autoload": {
     "psr-4": {
@@ -23,6 +23,6 @@
     }
   },
   "suggest": {
-    "quiqqer\/permalinks": "If you want to continue using the permalink feature, you need the quiqqer\/permalinks package."
+    "quiqqer/permalinks": "If you want to continue using the permalink feature, you need the quiqqer/permalinks package."
   }
 }
