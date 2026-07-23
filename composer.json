@@ -2,24 +2,33 @@
     "name": "quiqqer/meta",
     "type": "quiqqer-module",
     "description": "The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).",
-    "license": "GPL-3.0+",
+    "homepage": "https://www.quiqqer.com",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
-            "name": "Henning Leutz",
-            "email": "leutz@pcsg.de",
-            "homepage": "https://www.pcsg.de",
-            "role": "Developer"
+            "name": "PCSG - Computer & Internet Service OHG",
+            "email": "info@quiqqer.com",
+            "homepage": "https://www.quiqqer.com",
+            "role": "Maintainer"
         }
     ],
     "support": {
-        "email": "support@pcsg.de"
+        "email": "support@pcsg.de",
+        "issues": "https://dev.quiqqer.com/quiqqer/meta/-/issues",
+        "source": "https://dev.quiqqer.com/quiqqer/meta"
     },
     "require": {
+        "php": "^8.2",
         "quiqqer/core": "^2"
     },
     "autoload": {
         "psr-4": {
             "QUI\\Meta\\": "src/QUI/Meta"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "QUITests\\Meta\\": "tests/unit/QUI/Meta"
         }
     },
     "suggest": {
