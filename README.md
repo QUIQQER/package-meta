@@ -25,9 +25,9 @@ The package name is: quiqqer/meta
 Contribute
 ----------
 
-- Project: https://dev.quiqqer.com/quiqqer/package-meta
-- Source Code: https://dev.quiqqer.com/quiqqer/package-meta/tree/master
-- Issue Tracker: https://dev.quiqqer.com/quiqqer/package-meta/issues
+- Project: https://dev.quiqqer.com/quiqqer/meta
+- Source Code: https://dev.quiqqer.com/quiqqer/meta/-/tree/main
+- Issue Tracker: https://dev.quiqqer.com/quiqqer/meta/-/issues
 
 
 Support
@@ -42,4 +42,4 @@ of the project.
 License
 -------
 
-- GPL-3.0+
+- GPL-3.0-or-later
