@@ -11,6 +11,11 @@
                 The SEO description should not be longer than 150 characters.<br />
                 <b>Characters used: [length]</b>
             ]]></en>
+            <es><![CDATA[La descripción SEO no debería superar los 150 caracteres.<br /><b>Caracteres utilizados: [length]</b>]]></es>
+            <pt><![CDATA[A descrição SEO não deve ultrapassar os 150 caracteres.<br /><b>Caracteres utilizados: [length]</b>]]></pt>
+            <fr><![CDATA[La description SEO ne devrait pas dépasser 150 caractères.<br /><b>Caractères utilisés : [length]</b>]]></fr>
+            <it><![CDATA[La descrizione SEO non dovrebbe superare i 150 caratteri.<br /><b>Caratteri utilizzati: [length]</b>]]></it>
+            <pl><![CDATA[Opis SEO nie powinien przekraczać 150 znaków.<br /><b>Liczba użytych znaków: [length]</b>]]></pl>
         </locale>
     </groups>
 
@@ -18,12 +23,22 @@
         <locale name="package.title">
             <de><![CDATA[QUIQQER - META]]></de>
             <en><![CDATA[QUIQQER - META]]></en>
+            <es><![CDATA[QUIQQER - META]]></es>
+            <pt><![CDATA[QUIQQER - META]]></pt>
+            <fr><![CDATA[QUIQQER - META]]></fr>
+            <it><![CDATA[QUIQQER - META]]></it>
+            <pl><![CDATA[QUIQQER - META]]></pl>
         </locale>
         <locale name="package.description" html="true">
             <de>
                 <![CDATA[Das Meta Plugin hilft Ihnen bei der Eingabe von Metadaten, welche für die Suchmaschinen Optimierung (SEO) ausschlaggebend sind.]]></de>
             <en>
                 <![CDATA[The Meta Plugin helps you to enter the metadata, which is crucial for search engine optimization (SEO).]]></en>
+            <es><![CDATA[El complemento Meta te ayuda a introducir los metadatos, fundamentales para la optimización en buscadores (SEO).]]></es>
+            <pt><![CDATA[O plugin Meta ajuda a introduzir os metadados, essenciais para a otimização para motores de pesquisa (SEO).]]></pt>
+            <fr><![CDATA[Le plugin Meta vous aide à saisir les métadonnées, essentielles au référencement naturel (SEO).]]></fr>
+            <it><![CDATA[Il plugin Meta ti aiuta a inserire i metadati, fondamentali per l’ottimizzazione per i motori di ricerca (SEO).]]></it>
+            <pl><![CDATA[Wtyczka Meta pomaga wprowadzać metadane, które mają kluczowe znaczenie dla optymalizacji pod kątem wyszukiwarek (SEO).]]></pl>
         </locale>
     </groups>
 
@@ -31,10 +46,20 @@
         <locale name="meta.project.settings.title">
             <de><![CDATA[Meta Einstellungen]]></de>
             <en><![CDATA[Meta settings]]></en>
+            <es><![CDATA[Configuración de metadatos]]></es>
+            <pt><![CDATA[Definições de metadados]]></pt>
+            <fr><![CDATA[Paramètres des métadonnées]]></fr>
+            <it><![CDATA[Impostazioni dei metadati]]></it>
+            <pl><![CDATA[Ustawienia metadanych]]></pl>
         </locale>
         <locale name="meta.project.settings.publisher">
             <de><![CDATA[Meta - Herausgeber (Publisher)]]></de>
             <en><![CDATA[Meta publisher]]></en>
+            <es><![CDATA[Editor de los metadatos]]></es>
+            <pt><![CDATA[Entidade responsável nos metadados]]></pt>
+            <fr><![CDATA[Éditeur dans les métadonnées]]></fr>
+            <it><![CDATA[Editore nei metadati]]></it>
+            <pl><![CDATA[Wydawca w metadanych]]></pl>
         </locale>
         <locale name="meta.project.settings.publisher.description">
             <de><![CDATA[
@@ -46,38 +71,78 @@
                 Default publisher for the project's metadata. If a page has its own publisher, the page value is used.
                 If this field is empty, the general project publisher is used.
             ]]></en>
+            <es><![CDATA[Editor predeterminado para los metadatos del proyecto. Si una página tiene su propio editor, se utiliza ese valor. Si este campo está vacío, se utiliza el editor general del proyecto.]]></es>
+            <pt><![CDATA[Entidade responsável predefinida para os metadados do projeto. Se uma página tiver a sua própria entidade responsável, é utilizado esse valor. Se este campo estiver vazio, é utilizada a entidade responsável geral do projeto.]]></pt>
+            <fr><![CDATA[Éditeur par défaut pour les métadonnées du projet. Si une page possède son propre éditeur, cette valeur est utilisée. Si ce champ est vide, l’éditeur général du projet est utilisé.]]></fr>
+            <it><![CDATA[Editore predefinito per i metadati del progetto. Se una pagina ha un proprio editore, viene usato quel valore. Se il campo è vuoto, viene usato l’editore generale del progetto.]]></it>
+            <pl><![CDATA[Domyślny wydawca w metadanych projektu. Jeśli dla strony podano własnego wydawcę, używana jest ta wartość. Jeśli pole jest puste, używany jest ogólny wydawca projektu.]]></pl>
         </locale>
         <locale name="meta.project.settings.copyright">
             <de><![CDATA[Meta - Copyright]]></de>
             <en><![CDATA[Meta copyright]]></en>
+            <es><![CDATA[Derechos de autor en los metadatos]]></es>
+            <pt><![CDATA[Direitos de autor nos metadados]]></pt>
+            <fr><![CDATA[Droits d’auteur dans les métadonnées]]></fr>
+            <it><![CDATA[Copyright nei metadati]]></it>
+            <pl><![CDATA[Prawa autorskie w metadanych]]></pl>
         </locale>
         <locale name="meta.project.settings.revisit">
             <de><![CDATA[Meta - Suchmaschinen Überprüfungszeit (Revisit After)]]></de>
             <en><![CDATA[Meta Revisit After]]></en>
+            <es><![CDATA[Intervalo entre visitas de los buscadores (Revisit After)]]></es>
+            <pt><![CDATA[Intervalo entre visitas dos motores de pesquisa (Revisit After)]]></pt>
+            <fr><![CDATA[Intervalle entre les visites des moteurs de recherche (Revisit After)]]></fr>
+            <it><![CDATA[Intervallo tra le visite dei motori di ricerca (Revisit After)]]></it>
+            <pl><![CDATA[Odstęp między wizytami robotów wyszukiwarek (Revisit After)]]></pl>
         </locale>
 
         <!-- projects meta data settings-->
         <locale name="quiqqer.projects.keywords">
             <de><![CDATA[]]></de>
             <en><![CDATA[]]></en>
+            <es><![CDATA[]]></es>
+            <pt><![CDATA[]]></pt>
+            <fr><![CDATA[]]></fr>
+            <it><![CDATA[]]></it>
+            <pl><![CDATA[]]></pl>
         </locale>
         <locale name="quiqqer.projects.description">
             <de><![CDATA[]]></de>
             <en><![CDATA[]]></en>
+            <es><![CDATA[]]></es>
+            <pt><![CDATA[]]></pt>
+            <fr><![CDATA[]]></fr>
+            <it><![CDATA[]]></it>
+            <pl><![CDATA[]]></pl>
         </locale>
 
         <!-- site settings -->
         <locale name="quiqqer.meta.settings.title">
             <de><![CDATA[SEO & Meta Einstellungen]]></de>
             <en><![CDATA[SEO & meta settings]]></en>
+            <es><![CDATA[Configuración de SEO y metadatos]]></es>
+            <pt><![CDATA[Definições de SEO e metadados]]></pt>
+            <fr><![CDATA[Paramètres SEO et métadonnées]]></fr>
+            <it><![CDATA[Impostazioni SEO e metadati]]></it>
+            <pl><![CDATA[Ustawienia SEO i metadanych]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.title">
             <de><![CDATA[SEO Seitentitel]]></de>
-            <en><![CDATA[SEO site title]]></en>
+            <en><![CDATA[SEO page title]]></en>
+            <es><![CDATA[Título SEO de la página]]></es>
+            <pt><![CDATA[Título SEO da página]]></pt>
+            <fr><![CDATA[Titre SEO de la page]]></fr>
+            <it><![CDATA[Titolo SEO della pagina]]></it>
+            <pl><![CDATA[Tytuł SEO strony]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.publisher">
             <de><![CDATA[Meta Herausgeber (Publisher)]]></de>
             <en><![CDATA[Meta publisher]]></en>
+            <es><![CDATA[Editor de los metadatos]]></es>
+            <pt><![CDATA[Entidade responsável nos metadados]]></pt>
+            <fr><![CDATA[Éditeur dans les métadonnées]]></fr>
+            <it><![CDATA[Editore nei metadati]]></it>
+            <pl><![CDATA[Wydawca w metadanych]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.publisher.description">
             <de><![CDATA[
@@ -87,61 +152,110 @@
             <en><![CDATA[
                 Optional publisher for this page. If empty, the publisher from the project settings is used.
             ]]></en>
+            <es><![CDATA[Editor opcional de esta página. Si el campo está vacío, se utiliza el editor definido en la configuración del proyecto.]]></es>
+            <pt><![CDATA[Entidade responsável opcional desta página. Se o campo estiver vazio, é utilizada a entidade responsável definida nas definições do projeto.]]></pt>
+            <fr><![CDATA[Éditeur facultatif pour cette page. Si ce champ est vide, l’éditeur défini dans les paramètres du projet est utilisé.]]></fr>
+            <it><![CDATA[Editore facoltativo per questa pagina. Se il campo è vuoto, viene usato l’editore indicato nelle impostazioni del progetto.]]></it>
+            <pl><![CDATA[Opcjonalny wydawca tej strony. Jeśli pole jest puste, używany jest wydawca z ustawień projektu.]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.robots">
             <de><![CDATA[Anweisungen für Suchmaschinen]]></de>
             <en><![CDATA[Instructions for search engines]]></en>
+            <es><![CDATA[Instrucciones para los buscadores]]></es>
+            <pt><![CDATA[Instruções para os motores de pesquisa]]></pt>
+            <fr><![CDATA[Instructions pour les moteurs de recherche]]></fr>
+            <it><![CDATA[Istruzioni per i motori di ricerca]]></it>
+            <pl><![CDATA[Instrukcje dla wyszukiwarek]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.keywords">
             <de><![CDATA[SEO Stichworte]]></de>
             <en><![CDATA[SEO keywords]]></en>
+            <es><![CDATA[Palabras clave SEO]]></es>
+            <pt><![CDATA[Palavras-chave SEO]]></pt>
+            <fr><![CDATA[Mots-clés SEO]]></fr>
+            <it><![CDATA[Parole chiave SEO]]></it>
+            <pl><![CDATA[Słowa kluczowe SEO]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.description">
             <de><![CDATA[SEO Beschreibung]]></de>
             <en><![CDATA[SEO description]]></en>
+            <es><![CDATA[Descripción SEO]]></es>
+            <pt><![CDATA[Descrição SEO]]></pt>
+            <fr><![CDATA[Description SEO]]></fr>
+            <it><![CDATA[Descrizione SEO]]></it>
+            <pl><![CDATA[Opis SEO]]></pl>
         </locale>
 
         <!-- robots index -->
         <locale name="quiqqer.meta.site.robots.index">
             <de><![CDATA[Indizierung der Seite erlauben]]></de>
             <en><![CDATA[Allow indexing of page]]></en>
+            <es><![CDATA[Permitir la indexación de la página]]></es>
+            <pt><![CDATA[Permitir a indexação da página]]></pt>
+            <fr><![CDATA[Autoriser l’indexation de la page]]></fr>
+            <it><![CDATA[Consenti l’indicizzazione della pagina]]></it>
+            <pl><![CDATA[Zezwól na indeksowanie strony]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.robots.noindex">
             <de><![CDATA[Indizierung der Seite nicht erlauben]]></de>
             <en><![CDATA[Disallow indexing of page]]></en>
+            <es><![CDATA[No permitir la indexación de la página]]></es>
+            <pt><![CDATA[Não permitir a indexação da página]]></pt>
+            <fr><![CDATA[Interdire l’indexation de la page]]></fr>
+            <it><![CDATA[Non consentire l’indicizzazione della pagina]]></it>
+            <pl><![CDATA[Nie zezwalaj na indeksowanie strony]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.robots.nofollow">
-            <de><![CDATA[Untergeordnete Seiten / Dateien nicht besuchen]]></de>
-            <en><![CDATA[Don't visit child pages]]></en>
+            <de><![CDATA[Links auf dieser Seite nicht folgen]]></de>
+            <en><![CDATA[Do not follow links on this page]]></en>
+            <es><![CDATA[No seguir los enlaces de esta página]]></es>
+            <pt><![CDATA[Não seguir as ligações desta página]]></pt>
+            <fr><![CDATA[Ne pas suivre les liens de cette page]]></fr>
+            <it><![CDATA[Non seguire i link di questa pagina]]></it>
+            <pl><![CDATA[Nie podążaj za linkami na tej stronie]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.robots.noindex_nofollow">
-            <de><![CDATA[Indizierung der Seite nicht erlaubt und untergeordnete Seiten / Dateien nicht besuchen]]></de>
-            <en><![CDATA[Disallow indexing of page and don't visit child pages]]></en>
+            <de><![CDATA[Indizierung der Seite nicht erlauben und Links auf dieser Seite nicht folgen]]></de>
+            <en><![CDATA[Disallow indexing of this page and do not follow its links]]></en>
+            <es><![CDATA[No permitir la indexación de la página ni seguir sus enlaces]]></es>
+            <pt><![CDATA[Não permitir a indexação da página nem seguir as suas ligações]]></pt>
+            <fr><![CDATA[Interdire l’indexation de la page et ne pas suivre ses liens]]></fr>
+            <it><![CDATA[Non consentire l’indicizzazione della pagina e non seguirne i link]]></it>
+            <pl><![CDATA[Nie zezwalaj na indeksowanie strony ani nie podążaj za jej linkami]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.robots.all">
-            <de><![CDATA[Inhalte der Seite und aus untergeordneten Seiten besuchen und indizieren]]></de>
-            <en><![CDATA[Visit child pages and allow indexing of child pages]]></en>
+            <de><![CDATA[Indizierung der Seite und Folgen ihrer Links erlauben]]></de>
+            <en><![CDATA[Allow indexing of this page and following its links]]></en>
+            <es><![CDATA[Permitir la indexación de la página y seguir sus enlaces]]></es>
+            <pt><![CDATA[Permitir a indexação da página e seguir as suas ligações]]></pt>
+            <fr><![CDATA[Autoriser l’indexation de la page et le suivi de ses liens]]></fr>
+            <it><![CDATA[Consenti l’indicizzazione della pagina e segui i suoi link]]></it>
+            <pl><![CDATA[Zezwól na indeksowanie strony i podążanie za jej linkami]]></pl>
         </locale>
 
         <locale name="quiqqer.meta.site.canonicalLink">
             <de><![CDATA[Canonical Link]]></de>
             <en><![CDATA[Canonical link]]></en>
+            <es><![CDATA[Enlace canónico]]></es>
+            <pt><![CDATA[Ligação canónica]]></pt>
+            <fr><![CDATA[Lien canonique]]></fr>
+            <it><![CDATA[Link canonico]]></it>
+            <pl><![CDATA[Link kanoniczny]]></pl>
         </locale>
         <locale name="quiqqer.meta.site.canonicalLink.description" html="true">
-            <de><![CDATA[
-            Der Canonical Tag ist eine Anweisung auf einer Unterseite der für Suchmaschinen beschreibt,
-            auf welcher URL sich das Original dieser Seite befindet.
+            <de><![CDATA[Der Canonical-Tag gibt Suchmaschinen die bevorzugte URL für den Inhalt dieser Seite an.
             <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls?hl=de" target="_blank">
-                Möchtest du mehr wissen, besuche hierzu die folgende Seite
-            </a>.
-            ]]></de>
-            <en><![CDATA[
-            The canonical tag is a statement on a subpage that describes for search engines,
-            on which URL the original of this page is located.
+                Auf der folgenden Seite erfährst du mehr
+            </a>.]]></de>
+            <en><![CDATA[The canonical tag tells search engines the preferred URL for the content of this page.
             <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">
-                If you want to know more, please visit the following page
-            </a>.
-            ]]></en>
+                Visit the following page to learn more
+            </a>.]]></en>
+            <es><![CDATA[La etiqueta canonical indica a los buscadores la URL preferida para el contenido de esta página. <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">Consulta la siguiente página para obtener más información</a>.]]></es>
+            <pt><![CDATA[A etiqueta canonical indica aos motores de pesquisa o URL preferido para o conteúdo desta página. <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">Consulte a página seguinte para obter mais informações</a>.]]></pt>
+            <fr><![CDATA[La balise canonical indique aux moteurs de recherche l’URL préférée pour le contenu de cette page. <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">Consultez la page suivante pour en savoir plus</a>.]]></fr>
+            <it><![CDATA[Il tag canonical indica ai motori di ricerca l’URL preferito per il contenuto di questa pagina. <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">Visita la pagina seguente per saperne di più</a>.]]></it>
+            <pl><![CDATA[Tag canonical wskazuje wyszukiwarkom preferowany adres URL treści tej strony. <a href="https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls" target="_blank">Więcej informacji znajdziesz na poniższej stronie</a>.]]></pl>
         </locale>
 
     </groups>
